@@ -167,13 +167,11 @@ body {
 /* Home page */
 
 #hero {
-  background-image: url(image/mulher_negra_com_a_mao_no_peito_com_moletom_verde_sorrindo.png);
+  background-image: url(img/hero4.png);
   background-position: top 25% right 0;
   background-repeat: no-repeat;
-  background-size: 50rem;
-  background-position-y: 101%;
-
-  height: 89.8vh;
+  
+  height: 89.778vh;
 
   padding: 0 8rem;
 
@@ -196,9 +194,8 @@ body {
 }
 
 #hero button {
-  background: url('image/button.png');
+  background: url('img/button.png');
   background-position: center;
-  background-size: 160px;
   background-color: transparent;
   background-repeat: no-repeat;
 
@@ -358,7 +355,7 @@ body {
   width: 100%;
   height: 40vh;
 
-  background-image: url(image/banner_promotion.png);
+  background-image: url(img/banner/b1.jpg);
   background-size: 100%;
   background-position: center;
 }
@@ -396,8 +393,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   text-align: center;
-  background: url(image/banner2);
-  min-width: 55rem;
+  background: url(img/banner/b17.jpg);
   height: 38vh;
 
   background-size: cover;
@@ -407,7 +403,7 @@ body {
 }
 
 #sm-banner .banner-box2 {
-  background-image: url(image/banner3);
+  background-image: url(img/banner/b10.jpg);
   margin-top: 1rem;
   width: 100%;
 }
@@ -450,7 +446,8 @@ body {
   justify-content: center;
   align-items: flex-start;
   text-align: center;
-  background: url(image/banner4);
+  
+  background: url(img/banner/b7.jpg);
   min-width: 30%;
   height: 30vh;
 
@@ -461,12 +458,13 @@ body {
 }
 
 #banner3 .banner-box2 {
-  background: url(image/banner5);
-  background-position-y: 45%;
+  background: url(img/banner/b4.jpg);
+  background-position: center;
 }
 
 #banner3 .banner-box3 {
-  background: url(image/banner6);
+  background: url(img/banner/b18.jpg);
+  background-position: center;
 }
 
 #banner3 h2 {
@@ -643,6 +641,12 @@ footer .copyright {
   }
   #banner3 .banner-box {
     min-width: 28%;
+  }
+}
+
+@media (min-width: 448px) and (max-width: 820px) {
+  #banner3 .banner-box{
+    width: 100%;
   }
 }
 
