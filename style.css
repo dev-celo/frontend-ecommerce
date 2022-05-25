@@ -160,10 +160,6 @@ body {
   display: none;
 }
 
-.logo {
-  width: 10rem;
-}
-
 /* Home page */
 
 #hero {
@@ -496,9 +492,11 @@ footer .col1 img {
   width: 38rem;
 }
 
-footer .logo {
+footer .logo-footer {
   width: 15rem !important;
   margin-top: -3rem;
+
+  margin-bottom: 2.5rem;
 }
 
 footer h4 {
