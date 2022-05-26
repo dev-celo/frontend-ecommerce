@@ -552,6 +552,62 @@ footer .copyright {
   text-align: center;
 }
 
+/* Shop page */
+#page-header{
+  background-image: url(img/banner/b1.jpg);
+  width: 100%;
+  height: 40vh;
+
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 1.4rem;
+}
+
+#page-header h2,
+#page-header p{
+  color: #fff;
+}
+#pagination{
+  text-align: center;
+}
+
+#pagination a{
+  text-decoration: none;
+  background-color: #088178;
+  padding: 1.5rem 2rem;
+  border-radius: .4rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+#pagination a i{
+
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* Single Product */
+
+#prodetails .single-pro-img{
+  width: 40%;
+  margin-right: 5rem;
+}
+
+.small-img-group{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.small-img-col{
+  flex-basis: 24%;
+  cursor: pointer;
+}
 /* Start media query */
 
 @media (max-width: 799px) {
