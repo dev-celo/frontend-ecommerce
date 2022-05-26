@@ -167,9 +167,10 @@ body {
   background-image: url(img/hero4.png);
   background-position: top 25% right 0;
   background-repeat: no-repeat;
-  
+  background-size: cover;
   height: 89.778vh;
 
+  width: 100%;
   padding: 0 8rem;
 
   display: flex;
@@ -611,7 +612,7 @@ footer .copyright {
     height: 70vh;
     padding: 0 8rem;
     background-position: top 30% right 30%;
-    background-size: 100%;
+    background-size: cover;
   }
   #feature {
     justify-content: center;
@@ -643,7 +644,7 @@ footer .copyright {
   }
 }
 
-@media (min-width: 448px) and (max-width: 820px) {
+@media (min-width: 448px) and (max-width: 924px) {
   #banner3 .banner-box{
     width: 100%;
   }
@@ -666,6 +667,7 @@ footer .copyright {
     height: 60vh;
     padding: 0 2rem;
     background-position: 55%;
+    background-position-x: 80%;
   }
   #feature {
     justify-content: space-between;
