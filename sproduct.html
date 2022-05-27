@@ -64,6 +64,97 @@
           </div>
         </div>
       </div>
+
+      <div class="single-pro-details">
+        <h6>Home / T-Shirt</h6>
+        <h4>Men'n Fashion T Shirt</h4>
+        <h2>$139.00</h2>
+        <select name="#" id="">
+          <option >Select Size</option>
+          <option >XL</option>
+          <option >XXL</option>
+          <option >Small</option>
+          <option >Large</option>
+        </select>
+        <input type="number" value="1">
+        <button class="normal">Add To Cart</button>
+        <h4>Product Details</h4>
+        <span>Lorem ispansum, dolor sit amet consectetur adipisicing elit. Sunt molestias illo fugiat. Neque asperiores officia nihil magni dolores sapiente, totam, deserunt ab vitae, omnis aliquid eveniet accusantium tempora. Iure, corrupti.</span>
+      </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+      <h2>Feature Products</h2>
+      <p>Summer Collection New Modern Design</p>
+      <div class="pro-container">
+        <div class="pro">
+          <img src="img/products/n1.jpg" alt="" />
+          <div class="des">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>$78</h4>
+          </div>
+          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+
+        <div class="pro">
+          <img src="img/products/n2.jpg" alt="" />
+          <div class="des">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>$78</h4>
+          </div>
+          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+
+        <div class="pro">
+          <img src="img/products/n3.jpg" alt="" />
+          <div class="des">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>$78</h4>
+          </div>
+          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+
+        <div class="pro">
+          <img src="img/products/n4.jpg" alt="" />
+          <div class="des">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>$78</h4>
+          </div>
+          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+      </div>
     </section>
 
     <footer class="section-p1 ">
@@ -117,6 +208,26 @@
           <p>&copy; 2021, tech2 etc - HTML CSS Ecommerce Template</p>
         </div>
     </footer>
+
+
+
+    <script>
+      let mainImg = document.getElementById('MainImage')
+      let smallImg = document.getElementsByClassName('small-img')
+
+      smallImg[0].onclick = function(){
+        mainImg.src = smallImg[0].src
+      }
+      smallImg[1].onclick = function(){
+        mainImg.src = smallImg[1].src
+      }
+      smallImg[2].onclick = function(){
+        mainImg.src = smallImg[2].src
+      }
+      smallImg[3].onclick = function(){
+        mainImg.src = smallImg[3].src
+      }
+    </script>
 
     <script src="script.js"></script>
   </body>
