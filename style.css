@@ -16,6 +16,8 @@
   --background-alternative-rose: hsl(calc(353 - var(--hue)), 89%, 93%);
 
   --color-border: hsl(129, 36%, 85%);
+
+  --color-button-hover: hsl(calc(176 - var(--hue)), 88%, 27%);
 }
 
 * {
@@ -326,7 +328,7 @@ body {
   padding: 0.7rem;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #088178;
+  color: var(--color-button-hover);
 }
 
 #product1 .pro .cart {
@@ -336,7 +338,7 @@ body {
   border-radius: 4.4rem;
   background-color: #e8f6ea;
   background-size: 150%;
-  color: #088178;
+  color: var(--color-button-hover);
   padding: 1.2rem;
   border: 1px solid var(--color-border);
   position: absolute;
@@ -375,7 +377,7 @@ body {
 }
 
 #banner button:hover {
-  background-color: #088178;
+  background-color: var(--color-button-hover);
   color: #fff;
 }
 
@@ -426,8 +428,8 @@ body {
 }
 
 #sm-banner .banner-box:hover button {
-  background-color: #088178;
-  border: 1px solid #088178;
+  background-color: var(--color-button-hover);
+  border: 1px solid var(--color-button-hover);
   color: #fff;
 }
 
@@ -530,7 +532,7 @@ footer .follow i {
 
 footer .follow .svg-inline--fa:hover,
 footer a:hover {
-  color: #088178;
+  color: var(--color-button-hover);
   cursor: pointer;
 }
 
@@ -577,7 +579,7 @@ footer .copyright {
 
 #pagination a {
   text-decoration: none;
-  background-color: #088178;
+  background-color: var(--color-button-hover);
   padding: 1.5rem 2rem;
   border-radius: 0.4rem;
   color: #fff;
@@ -644,7 +646,7 @@ footer .copyright {
 }
 
 #prodetails .single-pro-details button {
-  background-color: #088178;
+  background-color: var(--color-button-hover);
   color: #fff;
 }
 
@@ -713,11 +715,11 @@ footer .copyright {
 }
 
 #blog .blog-details a:hover {
-  color: #088178;
+  color: var(--color-button-hover);
 }
 
 #blog .blog-details a:hover::after {
-  background-color: #088178;
+  background-color: var(--color-button-hover);
 }
 
 #blog .blog-box h1 {
@@ -852,7 +854,7 @@ footer .copyright {
   border: 1px solid #e1e1e1;
 }
 #form-details form button {
-  background-color: #088178;
+  background-color: var(--color-button-hover);
 }
 #form-details .people div {
   padding-bottom: 2.5rem;
@@ -959,7 +961,7 @@ footer .copyright {
   border: 1px solid var(--color-border);
 }
 #coupon button {
-  background-color: #088178;
+  background-color: var(--color-button-hover);
   color: #fff;
   padding: 1.2rem 2rem;
 }
@@ -981,7 +983,7 @@ footer .copyright {
   font-size: 1.3rem;
 }
 #subtotal button {
-  background-color: #088178;
+  background-color: var(--color-button-hover);
   color: #fff;
   padding: 1.2rem 2rem;
 }
