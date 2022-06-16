@@ -3,7 +3,7 @@
 :root {
   font-size: 62.5%; /*1 rem = 10px*/
 
-  --hue: 6;
+  --hue: 640;
 
   --color-title: hsl(0, 0%, 13%);
   --color-paragraphy: hsl(calc(160 - var(--hue)), 15%, 32%);
