@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+  font-size: 62.5%; /*1 rem = 10px*/
+
+  --hue: 640;
+
+  --color-title: hsl(0, 0%, 13%);
+  --color-paragraphy: hsl(calc(160 - var(--hue)), 15%, 32%);
+
+  --background-navbar-color: hsl(calc(235 - var(--hue)), 45%, 92%);
+  --color-font-navbar: hsl(0, 0%, 10%);
+
+  --color-font-navbar-hover: hsl(calc(182 - var(--hue)), 88%, 27%);
+
+  --background-alternative-rose: hsl(calc(353 - var(--hue)), 89%, 93%);
+
+  --color-border: hsl(129, 36%, 85%);
+
+  --color-button-hover: hsl(calc(176 - var(--hue)), 88%, 27%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'League Spartan', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  min-width: 300px;
+}
+/* General============================================ */
+h1 {
+  font-size: 5rem;
+  line-height: 6.4rem;
+  color: var(--color-title);
+}
+
+h2 {
+  font-size: 4.6rem;
+  line-height: 5.4rem;
+  color: var(--color-title);
+}
+
+h4 {
+  font-size: 2rem;
+  color: var(--color-title);
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1.6rem;
+  color: var(--color-paragraphy);
+}
+
+.section-p1 {
+  padding: 4rem 8rem;
+}
+
+.section-m1 {
+  margin: 4rem 0;
+}
+
+button.normal {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 1.5rem 3rem;
+  color: #000;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 200ms;
+}
+
+button.white {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 1.1rem 1.8rem;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #fff;
+  outline: none;
+  transition: 200ms;
+}
+
+body {
+  width: 100%;
+}
