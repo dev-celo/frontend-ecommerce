@@ -1,0 +1,34 @@
+#banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 40vh;
+
+  background-image: url(img/banner/b1.jpg);
+  background-size: 100%;
+  background-position: center;
+}
+
+#banner h4 {
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+#banner h2 {
+  color: #fff;
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+#banner h2 span {
+  color: brown;
+  font-size: 4rem;
+}
+
+#banner button:hover {
+  background-color: var(--color-button-hover);
+  color: #fff;
+}
