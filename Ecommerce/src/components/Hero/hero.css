@@ -1,21 +1,21 @@
-/* Home page */
+/* Hero styles */
 
 #hero {
-  background-image: url(img/hero4.png);
-  background-position: top 25% right 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 89.778vh;
-
-  width: 100%;
-  padding: 0 8rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-
+    background-image: url(../../img/hero4.png);
+    background-position: top 25% right 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 89.778vh;
+  
+    width: 100%;
+    padding: 0 8rem;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
 #hero h4 {
   padding-bottom: 1.5rem;
 }

@@ -1,10 +1,11 @@
 import './header.css';
+import logo from '../../img/logo.png';
 
 function Header() {
   return (
     <>
       <section id="header">
-        <a href="#"><img src="img/logo.png" className="logo" alt="cura logo da páginax" /></a>
+        <a href="#"><img src={logo} className="logo" alt="cura logo da páginax" /></a>
 
         <div>
           <ul id="navbar">
