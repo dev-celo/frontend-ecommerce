@@ -9,7 +9,7 @@ export function FirstProduct() {
       <div className="pro-container">
         {products.map((product, index) => (
           <div className="pro" key={index}>
-            <img src={product.imgSrc} alt={product.title} />
+            <img src={product.imgSrc} alt="" />
             <div className="des">
               <span>{product.brand}</span>
               <h5>{product.title}</h5>
