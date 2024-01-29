@@ -1,0 +1,50 @@
+/* Hero styles */
+
+#hero {
+    background-image: url(../../img/hero4.png);
+    background-position: top 25% right 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 89.778vh;
+  
+    width: 100%;
+    padding: 0 8rem;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  #hero h4 {
+    padding-bottom: 1.5rem;
+  }
+  
+  #hero h1 {
+    color: var(--color-font-navbar-hover);
+  }
+  
+  #hero p {
+    padding-bottom: 1.5rem;
+  }
+  
+  #hero button {
+    background: url('img/button.png');
+    background-position: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+  
+    cursor: pointer;
+  
+    color: var(--color-font-navbar-hover);
+  
+    border: 0;
+    padding: 1.4rem 8rem 1.4rem 6.5rem;
+  
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+  
+  .cont {
+    background-color: var(--background-navbar-color);
+  }
