@@ -1,5 +1,5 @@
 import './secondProduct.css';
-import { productsN } from './productsData';
+import productsN from './productsData';
 
 export function SecondProduct() {
   return (
