@@ -3,7 +3,7 @@ import './firstProduct.css';
 export function FirstProduct() {
   return (
     <section id="product1" className="section-p1">
-      <h2>Featured Products</h2>
+      <h2>Featured Productes</h2>
       <p>Summer Collection New Modern Design</p>
       <div className="pro-container">
         <div className="pro">

@@ -6,7 +6,7 @@ import { Footer } from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header"
 import Hero from "../../components/Hero/Hero";
 import { SecondProduct } from "../../components/SecondProduct/SecondProduct";
-import { SmallBaners } from "../../components/SmallBanners/SmallBanners";
+import SmallBaners from "../../components/SmallBanners/SmallBanners";
 
 function Home() {
   return (
