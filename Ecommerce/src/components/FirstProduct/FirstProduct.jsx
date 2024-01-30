@@ -1,11 +1,10 @@
-import { useState } from 'react';
 import './firstProduct.css';
 import { products } from './productsData';
-import ProductDetails from '../ProductDetail/ProductDetail';
 import { Link } from 'react-router-dom';
+import { useAppContext } from '../../../context/productsContext';
 
 export function FirstProduct() {
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  const { setSelectedProduct } = useAppContext();
 
   const handleProductClick = (index) => {
     setSelectedProduct(products[index])
@@ -34,10 +33,6 @@ export function FirstProduct() {
             </Link>
           </div>
         ))}
-
-        {selectedProduct && (
-          <ProductDetails product={selectedProduct} />
-        )}
       </div>
     </section>
   );

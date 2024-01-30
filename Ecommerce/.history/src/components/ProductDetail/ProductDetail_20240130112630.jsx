@@ -4,6 +4,7 @@ import { useAppContext } from '../../../context/productsContext';
 
 function ProductDetail() {
     const { selectedProduct } = useAppContext();
+    console.log(selectedProduct);
 
     if (!selectedProduct) {
         // Lida com o caso em que não há nenhum produto selecionado
