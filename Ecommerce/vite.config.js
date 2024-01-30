@@ -7,4 +7,11 @@ export default defineConfig({
   server: {
     open: true,
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined, // Isso desativa a criação automática de chunks
+      },
+    }
+  }    
 })
