@@ -12,7 +12,7 @@
   align-items: flex-start;
   text-align: center;
 
-  background: url(img/banner/b7.jpg);
+  background: url(src/img/banner/b7.jpg);
   min-width: 30%;
   height: 30vh;
 
@@ -23,12 +23,12 @@
 }
 
 #banner3 .banner-box2 {
-  background: url(img/banner/b4.jpg);
+  background: url(src/img/banner/b4.jpg);
   background-position: center;
 }
 
 #banner3 .banner-box3 {
-  background: url(img/banner/b18.jpg);
+  background: url(src/img/banner/b18.jpg);
   background-position: center;
 }
 
