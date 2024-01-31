@@ -11,7 +11,7 @@ export function AppProvider({ children }) {
   return (
     <AppContext.Provider value={{ selectedProduct, setSelectedProduct }}>
       {children}
-    </AppContext.Provider>
+    </AppContext.Provider>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
   );
 }
 

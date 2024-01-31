@@ -1,9 +1,19 @@
 import PropTypes from 'prop-types';
 import './productDetail.css';
 import { useAppContext } from '../../../context/productsContext';
+import { useEffect } from 'react';
+import Cookies from 'js-cookie';
 
 function ProductDetail() {
-    const { selectedProduct } = useAppContext();
+    const { selectedProduct, setSelectedProduct } = useAppContext();
+
+    useEffect(() => {
+        const storedSelectedProduct = Cookies.get('SelectedProduct')
+        console.log('cookies', storedSelectedProduct);
+        if(storedSelectedProduct) {
+            setSelectedProduct(JSON.parse(storedSelectedProduct));
+        }
+    }, [setSelectedProduct])
 
     if (!selectedProduct) {
         // Lida com o caso em que não há nenhum produto selecionado

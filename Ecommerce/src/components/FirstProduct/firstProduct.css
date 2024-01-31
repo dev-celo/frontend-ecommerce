@@ -75,3 +75,7 @@
   bottom: 1.5rem;
   right: 1.5rem;
 }
+
+#product1 .no-link-style {
+  text-decoration: none;
+}

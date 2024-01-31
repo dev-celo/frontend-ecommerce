@@ -1,13 +1,16 @@
 import './firstProduct.css';
-import { products } from './productsData';
 import { Link } from 'react-router-dom';
 import { useAppContext } from '../../../context/productsContext';
+import PropTypes from 'prop-types';
+import Cookies from 'js-cookie';
 
-export function FirstProduct() {
+export function FirstProduct(props) {
   const { setSelectedProduct } = useAppContext();
+  const { products } = props;
 
   const handleProductClick = (index) => {
     setSelectedProduct(products[index])
+    Cookies.set('SelectedProduct', JSON.stringify(products[index]))
   };
 
   return (
@@ -17,7 +20,7 @@ export function FirstProduct() {
       <div className="pro-container">
         {products.map((product, index) => (
           <div className="pro" onClick={() => handleProductClick(index)} key={index} >
-            <Link to={`/product/${index}`} >
+            <Link className="no-link-style" to={`/product/${index}`} >
               <img src={product.imgSrc} alt={product.title} />
               <div className="des">
                 <span>{product.brand}</span>
@@ -37,3 +40,16 @@ export function FirstProduct() {
     </section>
   );
 }
+
+FirstProduct.propTypes = {
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      imgSrc: PropTypes.string.isRequired,
+      brand: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      rating: PropTypes.number.isRequired,
+      price: PropTypes.string.isRequired,
+      details: PropTypes.string,
+    })
+  ).isRequired,
+};
