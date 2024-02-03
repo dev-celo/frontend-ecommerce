@@ -20,7 +20,7 @@ export function FirstProduct(props) {
       <div className="pro-container">
         {products.map((product, index) => (
           <div className="pro" onClick={() => handleProductClick(index)} key={index} >
-            <Link className="no-link-style" to={`/product/${index}`} >
+            <Link className="no-link-style" to={`/product/${product.type}/${index}`} >
               <img src={product.imgSrc} alt={product.title} />
               <div className="des">
                 <span>{product.brand}</span>

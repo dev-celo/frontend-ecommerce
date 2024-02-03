@@ -6,7 +6,7 @@ import { Footer } from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header"
 import Hero from "../../components/Hero/Hero";
 import { SmallBaners } from "../../components/SmallBanners/SmallBanners";
-import { products, products2 } from "../../components/data/productsData";
+import {  shirts, others } from "../../components/data/productsData";
 
 function Home() {
   return (
@@ -14,9 +14,9 @@ function Home() {
       <Header />
       <Hero />
       <Feature />
-      <FirstProduct products={products} />
+      <FirstProduct products={shirts} />
       <Banner />
-      <FirstProduct products={products2} />
+      <FirstProduct products={others} />
       <DoubleBanner />
       <SmallBaners />
       <Footer />

@@ -3,20 +3,27 @@ import './productDetail.css';
 import { useAppContext } from '../../../context/productsContext';
 import { useEffect } from 'react';
 import Cookies from 'js-cookie';
+import { useParams } from 'react-router-dom';
+import { shirts, others } from '../data/productsData';
 
 function ProductDetail() {
     const { selectedProduct, setSelectedProduct } = useAppContext();
+    const { id, typeProduct } = useParams();
 
     useEffect(() => {
         const storedSelectedProduct = Cookies.get('SelectedProduct')
-        console.log('cookies', storedSelectedProduct);
-        if(storedSelectedProduct) {
-            setSelectedProduct(JSON.parse(storedSelectedProduct));
+        if (typeProduct === 'shirts') {
+            return setSelectedProduct(shirts[id]);
         }
-    }, [setSelectedProduct])
+        
+        setSelectedProduct(others[id]);
+
+        if(storedSelectedProduct && id === storedSelectedProduct.id) {
+            return setSelectedProduct(JSON.parse(storedSelectedProduct));
+        }
+    }, [id, setSelectedProduct, typeProduct])
 
     if (!selectedProduct) {
-        // Lida com o caso em que não há nenhum produto selecionado
         return <p>Selecione um produto para ver os detalhes.</p>;
     }
 
@@ -66,6 +73,7 @@ function ProductDetail() {
 // Adicionando PropTypes para as props
 ProductDetail.propTypes = {
     product: PropTypes.shape({
+      type: PropTypes.string.isRequired,   
       imgSrc: PropTypes.string.isRequired,
       brand: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,

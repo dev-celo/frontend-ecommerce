@@ -1,6 +1,8 @@
 // productsData.js
-export const products = [
+export const shirts = [
   {
+    id: 0,
+    type: "shirts",
     imgSrc: "/src/img/products/f1.jpg",
     brand: "Adidas",
     title: "Cartoon Astronaut T-shirts",
@@ -9,6 +11,8 @@ export const products = [
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel justo nec nulla dictum rutrum. Vestibulum non metus nec justo consectetur luctus."
   },
   {
+    id: 1,
+    type: "shirts",
     imgSrc: "/src/img/products/f2.jpg",
     brand: "Nike",
     title: "Graphic Print Hoodie",
@@ -17,6 +21,8 @@ export const products = [
     details: "Sed sit amet odio nec elit tincidunt euismod. Vestibulum vel orci ut nisl auctor auctor ut vel libero."
   },
   {
+    id: 2,
+    type: "shirts",
     imgSrc: "/src/img/products/f3.jpg",
     brand: "Puma",
     title: "Sporty Jogger Pants",
@@ -25,6 +31,8 @@ export const products = [
     details: "Curabitur vitae justo non nisl efficitur dapibus. Ut condimentum purus ut mi tincidunt, vel rhoncus turpis vulputate."
   },
   {
+    id: 3,
+    type: "shirts",
     imgSrc: "/src/img/products/f4.jpg",
     brand: "Adidas",
     title: "Running Shoes",
@@ -33,6 +41,8 @@ export const products = [
     details: "Fusce in mauris quis dui fermentum sagittis. Phasellus eget felis vel erat scelerisque fermentum non id nulla."
   },
   {
+    id: 4,
+    type: "shirts",
     imgSrc: "/src/img/products/f5.jpg",
     brand: "Nike",
     title: "Casual Sneakers",
@@ -41,6 +51,8 @@ export const products = [
     details: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer ut augue ligula."
   },
   {
+    id: 5,
+    type: "shirts",
     imgSrc: "/src/img/products/f6.jpg",
     brand: "Puma",
     title: "Classic Baseball Cap",
@@ -49,6 +61,8 @@ export const products = [
     details: "Vivamus id justo vel ipsum scelerisque auctor. In hac habitasse platea dictumst. Integer ac volutpat libero."
   },
   {
+    id: 6,
+    type: "shirts",
     imgSrc: "/src/img/products/f7.jpg",
     brand: "Adidas",
     title: "Gym Duffle Bag",
@@ -57,6 +71,8 @@ export const products = [
     details: "Morbi euismod turpis nec leo ultricies, non hendrerit lectus cursus. Ut finibus, velit sit amet laoreet interdum, dui nisi eleifend elit."
   },
   {
+    id: 7,
+    type: "shirts",
     imgSrc: "/src/img/products/f8.jpg",
     brand: "Nike",
     title: "Tech-Fit Compression Leggings",
@@ -66,8 +82,10 @@ export const products = [
   },
 ];
 
-export const products2 = [
+export const others = [
   {
+    id: 0,
+    type: "others",
     imgSrc: "/src/img/products/n1.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
@@ -75,6 +93,8 @@ export const products2 = [
     price: "$78",
   },
   {
+    id: 1,
+    type: "others",
     imgSrc: "/src/img/products/n2.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
@@ -82,6 +102,8 @@ export const products2 = [
     price: "$78",
   },
   {
+    id: 2,
+    type: "others",
     imgSrc: "/src/img/products/n3.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
@@ -89,6 +111,8 @@ export const products2 = [
     price: "$78",
   },
   {
+    id: 3,
+    type: "others",
     imgSrc: "/src/img/products/n4.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
@@ -96,6 +120,8 @@ export const products2 = [
     price: "$78",
   },
   {
+    id: 4,
+    type: "others",
     imgSrc: "/src/img/products/n5.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
@@ -103,6 +129,8 @@ export const products2 = [
     price: "$78",
   },
   {
+    id: 5,
+    type: "others",
     imgSrc: "/src/img/products/n6.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
@@ -110,6 +138,8 @@ export const products2 = [
     price: "$78",
   },
   {
+    id: 6,
+    type: "others",
     imgSrc: "/src/img/products/n7.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
@@ -117,6 +147,8 @@ export const products2 = [
     price: "$78",
   },
   {
+    id: 7,
+    type: "others",
     imgSrc: "/src/img/products/n8.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",

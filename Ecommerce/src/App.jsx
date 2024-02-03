@@ -9,7 +9,7 @@ function App() {
     <AppProvider>
       <Routes>
         <Route path="/" Component={ Home } />
-        <Route path="/product/:id" Component={ DetailsProduct } />
+        <Route path="/product/:typeProduct/:id" Component={ DetailsProduct } />
       </Routes>
     </AppProvider>
   )
