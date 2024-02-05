@@ -10,6 +10,8 @@
   background-image: url(./src/img/banner/b1.jpg);
   background-size: 100%;
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #banner h4 {
@@ -31,4 +33,19 @@
 #banner button:hover {
   background-color: var(--color-button-hover);
   color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  #banner {
+    height: 60vh; /* Ajuste conforme necessário */
+  }
+
+  #banner h2 {
+    font-size: 2.5rem;
+    padding: 0.5rem;
+  }
+
+  #banner h2 span {
+    font-size: 3rem;
+  }
 }
