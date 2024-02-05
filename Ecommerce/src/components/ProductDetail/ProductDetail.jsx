@@ -10,18 +10,24 @@ function ProductDetail() {
     const { selectedProduct, setSelectedProduct } = useAppContext();
     const { id, typeProduct } = useParams();
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const productTypes = {
+        shirts,
+        others
+    };
+
     useEffect(() => {
         const storedSelectedProduct = Cookies.get('SelectedProduct')
-        if (typeProduct === 'shirts') {
-            return setSelectedProduct(shirts[id]);
-        }
-        
-        setSelectedProduct(others[id]);
 
-        if(storedSelectedProduct && id === storedSelectedProduct.id) {
-            return setSelectedProduct(JSON.parse(storedSelectedProduct));
+        if (productTypes[typeProduct]) {
+            const product = productTypes[typeProduct][id];
+            setSelectedProduct(product);
+
+            if (storedSelectedProduct && product.id === JSON.parse(storedSelectedProduct).id) {
+                return setSelectedProduct(JSON.parse(storedSelectedProduct));
+            }
         }
-    }, [id, setSelectedProduct, typeProduct])
+    }, [id, productTypes, setSelectedProduct, typeProduct])
 
     if (!selectedProduct) {
         return <p>Selecione um produto para ver os detalhes.</p>;

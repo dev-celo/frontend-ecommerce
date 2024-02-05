@@ -1,62 +1,87 @@
 /* Single Product */
 
 #prodetails {
-    display: flex;
-    margin-top: 2rem;
-  }
-  
-  #prodetails .single-pro-img {
-    width: 40%;
-    margin-right: 5rem;
-  }
-  
-  .small-img-group {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .small-img-col {
-    flex-basis: 24%;
-    cursor: pointer;
-  }
-  
-  #prodetails .single-pro-details {
-    width: 50%;
-    padding-top: 3rem;
-  }
-  
-  #prodetails .single-pro-details h4 {
-    padding: 4rem 0 2rem 0;
-  }
-  
-  #prodetails .single-pro-details h2 {
-    font-size: 2.6rem;
-  }
-  
-  #prodetails .single-pro-details select {
-    display: block;
-    padding: 0.5rem 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  #prodetails .single-pro-details input {
-    width: 5rem;
-    height: 4.7rem;
-    padding-left: 1rem;
-    font-size: 1.6rem;
-    margin-right: 1rem;
-  }
-  
-  #prodetails .single-pro-details input:focus {
-    outline: none;
-  }
-  
-  #prodetails .single-pro-details button {
-    background-color: var(--color-button-hover);
-    color: #fff;
-  }
-  
-  #prodetails .single-pro-details span {
-    line-height: 2.5rem;
-    font-size: 1.6rem;
-  }
+  display: flex;
+  margin-top: 2rem;
+}
+
+#prodetails .single-pro-img {
+  width: 40%;
+  margin-right: 5rem;
+}
+
+.small-img-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-img-col {
+  flex-basis: 24%;
+  cursor: pointer;
+}
+
+#prodetails .single-pro-details {
+  width: 50%;
+  padding-top: 3rem;
+}
+
+#prodetails .single-pro-details h4 {
+  padding: 4rem 0 2rem 0;
+}
+
+#prodetails .single-pro-details h2 {
+  font-size: 2.6rem;
+}
+
+#prodetails .single-pro-details select {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+#prodetails .single-pro-details input {
+  width: 5rem;
+  height: 4.7rem;
+  padding-left: 1rem;
+  font-size: 1.6rem;
+  margin-right: 1rem;
+}
+
+#prodetails .single-pro-details input:focus {
+  outline: none;
+}
+
+#prodetails .single-pro-details button {
+  background-color: var(--color-button-hover);
+  color: #fff;
+}
+
+#prodetails .single-pro-details span {
+  line-height: 2.5rem;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 768px) {
+#prodetails {
+  flex-direction: column;
+}
+
+#prodetails .single-pro-img {
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: 2rem;
+}
+
+#prodetails .single-pro-details {
+  width: 100%;
+}
+
+.small-img-group {
+  flex-direction: column;
+}
+
+.small-img-col {
+  flex-basis: 100%;
+  margin-bottom: 1rem;
+}
+}
