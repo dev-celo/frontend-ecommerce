@@ -5,8 +5,8 @@ import { FirstProduct } from "../../components/FirstProduct/FirstProduct";
 import { Footer } from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header"
 import Hero from "../../components/Hero/Hero";
-import { SecondProduct } from "../../components/SecondProduct/SecondProduct";
 import { SmallBaners } from "../../components/SmallBanners/SmallBanners";
+import {  shirts, others } from "../../components/data/productsData";
 
 function Home() {
   return (
@@ -14,9 +14,9 @@ function Home() {
       <Header />
       <Hero />
       <Feature />
-      <FirstProduct />
+      <FirstProduct products={shirts} />
       <Banner />
-      <SecondProduct />
+      <FirstProduct products={others} />
       <DoubleBanner />
       <SmallBaners />
       <Footer />

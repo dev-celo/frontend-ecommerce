@@ -2,7 +2,7 @@ import './footer.css';
 
 export function Footer() {
   return (
-    <footer>
+    <footer className="section-p1">
       <div className="col1">
         <img className="logo-footer" src="img/logo.png" alt="" />
         <h4>Contact</h4>
@@ -42,11 +42,11 @@ export function Footer() {
         <h4>Install App</h4>
         <p>From App Store or Goole Play</p>
         <div className="row">
-          <img src="img/pay/play.jpg" alt="" />
-          <img src="img/pay/app.jpg" alt="" />
+          <img src="src/img/pay/play.jpg" alt="" />
+          <img src="src/img/pay/app.jpg" alt="" />
         </div>
         <p>Secure Payment Getways</p>
-        <img className="payment" src="img/pay/pay.png" alt="" />
+        <img className="payment" src="src/img/pay/pay.png" alt="" />
       </div>
 
       <div className="copyright">

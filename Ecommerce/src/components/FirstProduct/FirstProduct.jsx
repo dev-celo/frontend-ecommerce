@@ -1,147 +1,55 @@
 import './firstProduct.css';
+import { Link } from 'react-router-dom';
+import { useAppContext } from '../../../context/productsContext';
+import PropTypes from 'prop-types';
+import Cookies from 'js-cookie';
 
-export function FirstProduct() {
+export function FirstProduct(props) {
+  const { setSelectedProduct } = useAppContext();
+  const { products } = props;
+
+  const handleProductClick = (index) => {
+    setSelectedProduct(products[index])
+    Cookies.set('SelectedProduct', JSON.stringify(products[index]))
+  };
+
   return (
-    <section id="product1" className="section-p1">
+    <section id="product1" className="section-p1" >
       <h2>Featured Products</h2>
       <p>Summer Collection New Modern Design</p>
       <div className="pro-container">
-        <div className="pro">
-          <img src="img/products/f1.jpg" alt="" />
-          <div className="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div className="star">
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
+        {products.map((product, index) => (
+          <div className="pro" onClick={() => handleProductClick(index)} key={index} >
+            <Link className="no-link-style" to={`/product/${product.type}/${index}`} >
+              <img src={product.imgSrc} alt={product.title} />
+              <div className="des">
+                <span>{product.brand}</span>
+                <h5>{product.title}</h5>
+                <div className="star">
+                  {[...Array(product.rating)].map((_, i) => (
+                    <i key={i} className="fas fa-star"></i>
+                  ))}
+                </div>
+                <h4>{product.price}</h4>
+              </div>
+              <a href="#"><i className="fas fa-shopping-cart cart"></i></a>
+            </Link>
           </div>
-          <a href="#"><i className="fas fa-shopping-cart cart"></i></a>
-        </div>
-
-        <div className="pro">
-          <img src="img/products/f2.jpg" alt="" />
-          <div className="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div className="star">
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i className="fas fa-shopping-cart cart"></i></a>
-        </div>
-
-        <div className="pro">
-          <img src="img/products/f3.jpg" alt="" />
-          <div className="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div className="star">
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i className="fas fa-shopping-cart cart"></i></a>
-        </div>
-
-        <div className="pro">
-          <img src="img/products/f4.jpg" alt="" />
-          <div className="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div className="star">
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i className="fas fa-shopping-cart cart"></i></a>
-        </div>
-
-        <div className="pro">
-          <img src="img/products/f5.jpg" alt="" />
-          <div className="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div className="star">
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i className="fas fa-shopping-cart cart"></i></a>
-        </div>
-
-        <div className="pro">
-          <img src="img/products/f6.jpg" alt="" />
-          <div className="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div className="star">
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i className="fas fa-shopping-cart cart"></i></a>
-        </div>
-
-        <div className="pro">
-          <img src="img/products/f7.jpg" alt="" />
-          <div className="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div className="star">
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i className="fas fa-shopping-cart cart"></i></a>
-        </div>
-
-        <div className="pro">
-          <img src="img/products/f8.jpg" alt="" />
-          <div className="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div className="star">
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i className="fas fa-shopping-cart cart"></i></a>
-        </div>
+        ))}
       </div>
     </section>
   );
 }
+
+FirstProduct.propTypes = {
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      imgSrc: PropTypes.string.isRequired,
+      brand: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      rating: PropTypes.number.isRequired,
+      price: PropTypes.string.isRequired,
+      details: PropTypes.string,
+    })
+  ).isRequired,
+};

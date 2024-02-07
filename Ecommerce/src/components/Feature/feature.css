@@ -51,3 +51,9 @@
 #feature .fe-box:nth-child(6) h6 {
   background-color: #fff2e5;
 }
+
+@media screen and (max-width: 768px) {
+  #feature .fe-box {
+    width: 100%;
+  }
+}
