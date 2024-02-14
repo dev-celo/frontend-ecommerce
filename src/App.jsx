@@ -10,10 +10,10 @@ function App() {
   return (
     <AppProvider>
       <Routes>
-        <Route path="/" Component={ Home } />
-        <Route path="/login" Component={ PageLogin } />
-        <Route path="/register" Component={ PageRegister } />
-        <Route path="/product/:typeProduct/:id" Component={ DetailsProduct } />
+        <Route path="/ecommerce" Component={ Home } />
+        <Route path="/ecommerce/login" Component={ PageLogin } />
+        <Route path="/ecommerce/register" Component={ PageRegister } />
+        <Route path="/ecommerce/product/:typeProduct/:id" Component={ DetailsProduct } />
       </Routes>
     </AppProvider>
   )
