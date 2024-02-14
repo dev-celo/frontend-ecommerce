@@ -22,8 +22,8 @@ function Register() {
             state: yup.string().required("O estado é obrigatório."),
             zipCode: yup.string().required("O cóigo postal é obrigatório."),
             telephone: yup.string().matches(/^\(\d{2}\)\s\d{4,5}-\d{4}$/, 'Número de telefone inválido').required('O número de telefone é obrigatório.'),
-            password: yup.string().required("As senhas devem ser iguais e obrigatórias"),
-            passwordConfirmation: yup.string().required("As senhas devem ser iguais e obrigatórias")
+            password: yup.string().required("Confirme a senha"),
+            passwordConfirmation: yup.string().required("As senhas devem ser iguais e obrigatórias").oneOf([yup.ref('password'), null], 'As senhas devem ser iguais')
         })
         .required()
 
