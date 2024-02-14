@@ -1,4 +1,5 @@
 {
+  "homepage": "https://dev-celo.github.io/ecommerce/",
   "name": "ecommerce",
   "version": "0.0.0",
   "type": "module",
@@ -6,7 +7,9 @@
     "dev": "vite",
     "build": "vite build && rm -rf dist/history",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run buils",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
@@ -31,6 +34,14 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
-    "vite": "^5.0.8"
+    "gh-pages": "^6.1.1",
+    "vite": "^5.0.8",
+    "vite-aliases": "^0.11.5",
+    "vite-plugin-gh-pages": "^0.4.1",
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-manifest": "^0.0.1",
+    "vite-plugin-pwa": "^0.18.1",
+    "vite-plugin-singlefile": "^2.0.0",
+    "vite-plugin-windicss": "^1.9.3"
   }
 }
