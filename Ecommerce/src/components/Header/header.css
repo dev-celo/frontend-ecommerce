@@ -70,6 +70,25 @@
   display: none;
 }
 
+/* Estilo para o botão */
+.custom-button {
+  background-color: #4caf50; /* Cor de fundo */
+  color: #ffffff; /* Cor do texto */
+  padding: 10px 20px; /* Espaçamento interno */
+  border: none; /* Remove a borda */
+  border-radius: 5px; /* Adiciona cantos arredondados */
+  cursor: pointer; /* Altera o cursor ao passar o mouse */
+  transition: all 0.3s ease-in-out; /* Adiciona transição para todas as propriedades */
+}
+
+/* Estilo para o botão ao passar o mouse */
+.custom-button:hover {
+  background-color: #45a049; /* Cor de fundo alterada */
+  transform: scale(1.05); /* Aumenta ligeiramente o tamanho do botão */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao botão */
+}
+
+
 @media (max-width: 820px) {
   section-p1 {
     padding: 2rem;
@@ -131,12 +150,15 @@
     display: none;
   }
 
-  #mobile #bar {
+  #mobile #bar,
+  #mobile #close,
+  #mobile #cart {
     color: #1a1a1a;
     font-size: 2.4rem;
     margin-left: 2.5rem;
     cursor: pointer;
   }
+
 
   #close {
     display: flex;
@@ -148,6 +170,12 @@
 
   #lg-bab {
     display: none;
+  }
+
+  #mobile {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
   }
 
   #mobile .fa-cart-shopping {
@@ -170,7 +198,7 @@
   }
 
   .expanded {
-    max-height: 4orem; /* Defina uma altura máxima maior do que a altura real do conteúdo para garantir que ele seja totalmente expandido */
+    max-height: 40rem; /* Defina uma altura máxima maior do que a altura real do conteúdo para garantir que ele seja totalmente expandido */
     transition: max-height 0.3s ease; /* Adicione uma transição suave de 0.3 segundos */
   }
 }

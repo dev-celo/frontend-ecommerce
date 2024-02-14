@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './header.css';
 import logo from '../../img/logo.png';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Header() {
@@ -42,6 +43,10 @@ function Header() {
     };
   }, []);
 
+  function isMobile() {
+    return window.innerWidth <= 768; // Defina o ponto de interrupção de largura de acordo com suas necessidades
+  }
+
   return (
     <>
       <section id="header">
@@ -59,13 +64,29 @@ function Header() {
             <li>
               <a id="lg-bab" href="cart.html">Carrinho</a>
             </li>
+            <li>
+              {
+                isMobile() ? null : (
+                  <Link to="/login">
+                    <button className="custom-button">Login</button>
+                  </Link>
+                )
+              }
+            </li>
           </ul>
         </div>
 
         <div id="mobile">
-          <FontAwesomeIcon icon="shopping-cart" />
+          {
+            isMobile() ? (
+              <Link to="/login">
+                <button className="custom-button">Login</button>
+              </Link>
+            ) : (null)
+          }
           <FontAwesomeIcon id="bar" icon="bars" />
           <FontAwesomeIcon id="close" style={{ display: 'none' }} icon="times" />
+          <FontAwesomeIcon id="cart" icon="shopping-cart" />
         </div>
       </section>
     </>
