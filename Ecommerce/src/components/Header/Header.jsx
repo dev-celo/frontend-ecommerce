@@ -50,9 +50,15 @@ function Header() {
   return (
     <>
       <section id="header">
-        <a href="#">
-          <img src={logo} className="logo" alt="cura logo da página" />
-        </a>
+        {
+          !isMobile() ? (
+            <Link to="/">
+              <a>
+                <img src={logo} className="logo" alt="Cura logo da página" />
+              </a>
+            </Link>
+          ) : null
+        }
 
         <div>
           <ul id="navbar" className={isMobileMenuOpen ? 'active' : ''}>
@@ -65,27 +71,25 @@ function Header() {
               <a id="lg-bab" href="cart.html">Carrinho</a>
             </li>
             <li>
-              {
-                isMobile() ? null : (
-                  <Link to="/login">
-                    <button className="custom-button">Login</button>
-                  </Link>
-                )
-              }
+              <Link to="/login">
+                <a className="custom-button">Login</a>
+              </Link>
             </li>
           </ul>
         </div>
 
         <div id="mobile">
-          {
-            isMobile() ? (
-              <Link to="/login">
-                <button className="custom-button">Login</button>
-              </Link>
-            ) : (null)
-          }
           <FontAwesomeIcon id="bar" icon="bars" />
           <FontAwesomeIcon id="close" style={{ display: 'none' }} icon="times" />
+          {
+            isMobile() ? (
+              <Link to="/">
+                <a>
+                  <img src={logo} className="logo" alt="cura logo da página" />
+                </a>
+              </Link>
+            ) : null
+          }
           <FontAwesomeIcon id="cart" icon="shopping-cart" />
         </div>
       </section>

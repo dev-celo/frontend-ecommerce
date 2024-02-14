@@ -109,6 +109,7 @@
   #mobile {
     display: flex;
     align-items: center;
+    width: 100%;
   }
 
   #navbar {
@@ -124,6 +125,7 @@
 
   #navbar.active {
     display: flex;
+    justify-content: space-between;
   }
 
   #navbar li {
@@ -162,7 +164,6 @@
 
   #close {
     display: flex;
-    align-items: end;
     color: #222;
     font-size: 2.4rem;
     margin-left: 1rem;
