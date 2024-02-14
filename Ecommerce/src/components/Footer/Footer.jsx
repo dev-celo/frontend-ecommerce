@@ -30,7 +30,7 @@ export function Footer() {
       </div>
 
       <div className="col1">
-        <h4>My coount</h4>
+        <h4>My count</h4>
         <a href="#">Sign in</a>
         <a href="#">View Cart</a>
         <a href="#">My wishlist</a>

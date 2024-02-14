@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-container {
+  position: relative;
+  width: 80%;
+  max-width: 400px; /* Define uma largura máxima para o container do formulário */
+}
+
+.form-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 36px 1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  z-index: 99;
+}
+
+.login-container form input {
+  display: block;
+  padding: 14.5px;
+  width: 100%;
+  margin: 1rem 0; /* Margem inferior e superior mais flexível */
+  color: var(--color-login);
+  outline: none;
+  background-color: #9191911f;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  font-size: 15px;
+  backdrop-filter: blur(15px);
+}
+
+.login-container form button {
+  background-color: var(--primary-color-login);
+  color: var(--color-login);
+  display: block;
+  padding: 13px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 1rem; /* Adiciona uma margem superior ao botão */
+  transition: all 0.1s ease-in-out;
+}
+
