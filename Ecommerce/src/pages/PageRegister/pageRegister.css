@@ -1,0 +1,15 @@
+.container-register {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.header {
+    margin-bottom: 10%;
+}
+
+@media screen and (max-width: 380px) {
+    .header {
+      margin-bottom: 30%; /* Aumenta a margem inferior para celulares com largura menor que 380px */
+    }
+  }
