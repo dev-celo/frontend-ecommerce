@@ -1,60 +1,54 @@
-.d-flex {
+.container {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.center {
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-/* register.css */
+.login-container {
+  position: relative;
+  width: 80%;
+  max-width: 400px; /* Define uma largura máxima para o container do formulário */
+}
 
-form {
-  max-width: 400px;
-  margin: 0 auto;
+.form-container {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #f9f9f9;
+  box-shadow: 0 0 36px 1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  z-index: 99;
 }
-input[type="text"],
-input[type="tel"],
-input[type="email"],
-input[type="password"] {
+
+.login-container form input {
+  display: block;
+  padding: 14.5px;
   width: 100%;
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-input[type="text"]:focus,
-input[type="tel"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
+  margin: 1rem 0; /* Margem inferior e superior mais flexível */
+  color: var(--color-login);
   outline: none;
-  border-color: #4caf50;
-}
-button[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
+  background-color: #9191911f;
   border: none;
   border-radius: 5px;
-  background-color: #4caf50;
-  color: white;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  font-size: 15px;
+  backdrop-filter: blur(15px);
+}
+
+.login-container form button {
+  background-color: var(--primary-color-login);
+  color: var(--color-login);
+  display: block;
+  padding: 13px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  width: 100%;
   cursor: pointer;
+  margin-top: 1rem; /* Adiciona uma margem superior ao botão */
+  transition: all 0.1s ease-in-out;
 }
-button[type="submit"]:hover {
-  background-color: #45a049;
-}
-.error-message {
-  color: red;
-  margin-top: 5px;
-}
+
