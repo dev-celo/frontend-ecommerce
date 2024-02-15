@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './header.css';
-import logo from '/ecommerce/src/img/logo.png';
+import logo from '/src/img/logo.png';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
