@@ -36,7 +36,7 @@ function Login() {
                         <button className="opacity">SUBMIT</button>
                     </form>
                     <div className="register-forget opacity">
-                        <Link to="/register">
+                        <Link to="/ecommerce/register">
                             <a href="">REGISTER</a>
                         </Link>
                         <a href="">FORGOT PASSWORD</a>

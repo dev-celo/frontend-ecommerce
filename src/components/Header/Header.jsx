@@ -52,7 +52,7 @@ function Header() {
       <section id="header">
         {
           !isMobile() ? (
-            <Link to="/">
+            <Link to="/ecommerce">
               <a>
                 <img src={logo} className="logo" alt="Cura logo da página" />
               </a>
@@ -71,7 +71,7 @@ function Header() {
               <a id="lg-bab" href="cart.html">Carrinho</a>
             </li>
             <li>
-              <Link to="/login">
+              <Link to="/ecommerce/login">
                 <a className="custom-button">Login</a>
               </Link>
             </li>
@@ -83,7 +83,7 @@ function Header() {
           <FontAwesomeIcon id="close" style={{ display: 'none' }} icon="times" />
           {
             isMobile() ? (
-              <Link to="/">
+              <Link to="/ecommerce">
                 <a>
                   <img src={logo} className="logo" alt="cura logo da página" />
                 </a>
