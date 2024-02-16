@@ -20,17 +20,20 @@
 #product1 .pro,
 #product1 .pro:hover {
   width: 23%;
-  min-width: 25rem;
+  min-width: 22rem;
   padding: 1rem 1.2rem;
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius);
   cursor: pointer;
   box-shadow: var(--box-shadow);
-  margin: 1.5rem 0;
+  margin: 1.5rem auto; /* Alterado para margem automática no eixo horizontal */
   transition: 0.3s ease;
   position: relative;
 }
 
+#product1 .pro:hover {
+  transform: scale(1.1); /* Aumenta a escala do card */
+}
 #product1 .pro img {
   width: 100%;
   border-radius: var(--border-radius);

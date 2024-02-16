@@ -82,6 +82,12 @@ footer .copyright {
     padding: 2rem;
   }
 
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   footer .col1 {
     display: flex;
     flex-wrap: wrap;
