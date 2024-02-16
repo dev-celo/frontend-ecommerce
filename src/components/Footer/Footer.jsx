@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="section-p1">
       <div className="col1">
-        <img className="logo-footer" src="/ecommerce/src/img/logo.png" alt="" />
+        <img className="logo-footer" src="./img/logo.png" alt="" />
         <h4>Contact</h4>
         <p><strong>Adress:</strong> 562 Wellington Road, Street 32, San Francisco</p>
         <p><strong>Phone:</strong> +01 2222 365/ (+91) 012345 6789</p>
@@ -42,11 +42,11 @@ export function Footer() {
         <h4>Install App</h4>
         <p>From App Store or Goole Play</p>
         <div className="row">
-          <img src="/ecommerce/src/img/pay/play.jpg" alt="" />
-          <img src="/ecommerce/src/img/pay/app.jpg" alt="" />
+          <img src="./img/pay/play.jpg" alt="" />
+          <img src="./img/pay/app.jpg" alt="" />
         </div>
         <p>Secure Payment Getways</p>
-        <img className="payment" src="/ecommerce/src/img/pay/pay.png" alt="" />
+        <img className="payment" src="./img/pay/pay.png" alt="" />
       </div>
 
       <div className="copyright">
