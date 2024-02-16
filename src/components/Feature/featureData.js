@@ -1,32 +1,32 @@
 export const features = [
   {
     key: 1,
-    imgSrc: "/ecommerce/src/img/features/f1.png",
+    imgSrc: "./img/features/f1.png",
     altText: "Free Shipping",
   },
   {
     key: 2,
-    imgSrc: "/ecommerce/src/img/features/f2.png",
+    imgSrc: "./img/features/f2.png",
     altText: "Online Order",
   },
   {
     key: 3,
-    imgSrc: "/ecommerce/src/img/features/f3.png",
+    imgSrc: "./img/features/f3.png",
     altText: "Save Money",
   },
   {
     key: 4,
-    imgSrc: "/ecommerce/src/img/features/f4.png",
+    imgSrc: "./img/features/f4.png",
     altText: "Promotions",
   },
   {
     key: 5,
-    imgSrc: "/ecommerce/src/img/features/f5.png",
+    imgSrc: "./img/features/f5.png",
     altText: "Happy Cell",
   },
   {
     key: 6,
-    imgSrc: "/ecommerce/src/img/features/f6.png",
+    imgSrc: "./img/features/f6.png",
     altText: "F24/7 Support",
   },
 ];
