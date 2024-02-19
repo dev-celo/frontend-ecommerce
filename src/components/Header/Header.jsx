@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import './header.css';
 import logo from '/img/logo.png';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Nav, Navbar as NavbarBs } from 'react-bootstrap';
 
 function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -44,56 +45,64 @@ function Header() {
   }, []);
 
   function isMobile() {
-    return window.innerWidth <= 768; // Defina o ponto de interrupção de largura de acordo com suas necessidades
+    return window.innerWidth <= 900; // Defina o ponto de interrupção de largura de acordo com suas necessidades
   }
 
   return (
-    <>
-      <section id="header">
+    <NavbarBs className="shadow-sm" id="header">
+      {
+        !isMobile() ? (
+          <Nav className="">
+            <Nav.Link to="/ecommerce/" as={NavLink}>
+              <img src={logo} className="logo" alt="Cura logo da página" />
+            </Nav.Link>
+          </Nav>
+        ) : null
+      }
+
+      <div>
+        <ul id="navbar" className={isMobileMenuOpen ? 'active' : ''}>
+          <Nav>
+            <Nav.Link to="/ecommerce/" as={NavLink}>
+              <li><a className="active" href="index.html">Home</a></li>
+            </Nav.Link>
+            <Nav.Link to="/ecommerce/shop" as={NavLink}>
+              <li><a href="shop.html">Shop</a></li>
+            </Nav.Link>
+            <Nav.Link to="/ecommerce/blog" as={NavLink}>
+              <li><a href="blog.html">Blog</a></li>
+            </Nav.Link>
+            <Nav.Link to="/ecommerce/about" as={NavLink}>
+              <li><a href="about.html">About</a></li>
+            </Nav.Link>
+            <Nav.Link to="/ecommerce/contact" as={NavLink}>
+              <li><a href="contact.html">Contact</a></li>
+            </Nav.Link>
+            <Nav.Link to="/ecommerce/cart" as={NavLink}>
+              <li><a id="lg-bab" href="cart.html">Carrinho</a></li>
+            </Nav.Link>
+            <Nav.Link to="/ecommerce/login" as={NavLink}>
+              <li><a className="custom-button">Login</a></li>
+            </Nav.Link>
+          </Nav>
+        </ul>
+      </div>
+
+      <div id="mobile">
+        <FontAwesomeIcon id="bar" icon="bars" />
+        <FontAwesomeIcon id="close" style={{ display: 'none' }} icon="times" />
         {
-          !isMobile() ? (
-            <Link to="/ecommerce">
-              <a>
+          isMobile() ? (
+            <Nav>
+              <Nav.Link to="/ecommerce" as={NavLink}>
                 <img src={logo} className="logo" alt="Cura logo da página" />
-              </a>
-            </Link>
+              </Nav.Link>
+            </Nav>
           ) : null
         }
-
-        <div>
-          <ul id="navbar" className={isMobileMenuOpen ? 'active' : ''}>
-            <li><a className="active" href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li>
-              <a id="lg-bab" href="cart.html">Carrinho</a>
-            </li>
-            <li>
-              <Link to="/ecommerce/login">
-                <a className="custom-button">Login</a>
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        <div id="mobile">
-          <FontAwesomeIcon id="bar" icon="bars" />
-          <FontAwesomeIcon id="close" style={{ display: 'none' }} icon="times" />
-          {
-            isMobile() ? (
-              <Link to="/ecommerce">
-                <a>
-                  <img src={logo} className="logo" alt="cura logo da página" />
-                </a>
-              </Link>
-            ) : null
-          }
-          <FontAwesomeIcon id="cart" icon="shopping-cart" />
-        </div>
-      </section>
-    </>
+        <FontAwesomeIcon id="cart" icon="shopping-cart" />
+      </div>
+    </NavbarBs>
   );
 }
 
