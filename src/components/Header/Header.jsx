@@ -3,7 +3,7 @@ import './header.css';
 import logo from '/img/logo.png';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Nav, Navbar as NavbarBs } from 'react-bootstrap';
+import { Nav, Navbar as NavbarBs, Button } from 'react-bootstrap';
 
 function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -100,7 +100,13 @@ function Header() {
             </Nav>
           ) : null
         }
-        <FontAwesomeIcon id="cart" icon="shopping-cart" />
+        <Button
+          style={{ width: "4rem", height: "4rem"}}
+          variant="outline-light"
+          className="cart"
+        >
+          <FontAwesomeIcon id="cart" icon="shopping-cart" />
+        </Button>
       </div>
     </NavbarBs>
   );

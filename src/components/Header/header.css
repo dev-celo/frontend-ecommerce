@@ -156,12 +156,10 @@
   #mobile #close,
   #mobile #cart {
     color: #1a1a1a;
-    font-size: 2.4rem;
-    margin-left: 2.5rem;
+    font-size: 2rem;
     cursor: pointer;
   }
-
-
+  
   #close {
     display: flex;
     color: #222;
