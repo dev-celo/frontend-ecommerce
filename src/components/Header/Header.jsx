@@ -49,7 +49,7 @@ function Header() {
   }
 
   return (
-    <NavbarBs className="shadow-sm" id="header">
+    <NavbarBs sticky="top" className="shadow-sm" id="header">
       {
         !isMobile() ? (
           <Nav className="">
@@ -101,11 +101,26 @@ function Header() {
           ) : null
         }
         <Button
-          style={{ width: "4rem", height: "4rem"}}
+          style={{ width: "4rem", height: "4rem" }}
           variant="outline-light"
           className="cart"
         >
           <FontAwesomeIcon id="cart" icon="shopping-cart" />
+          <div className="
+            rounded-circle
+            bg-danger d-flex 
+            justify-content-center
+            align-items-center"
+            style={{
+              color: "white",
+              width: "1.5rem",
+              height: "1.5rem",
+              position: "absolute",
+              bottom: 15, right: 30,
+              transform: "translate(25%, 25%)"
+            }}>
+              3
+            </div>
         </Button>
       </div>
     </NavbarBs>

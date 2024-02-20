@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { useAppContext } from '../../../context/productsContext';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import formatCurrency from '../../utilities/formatCurrency';
 
 export function FirstProduct(props) {
   const { setSelectedProduct } = useAppContext();
@@ -27,12 +30,12 @@ export function FirstProduct(props) {
                 <h5>{product.title}</h5>
                 <div className="star">
                   {[...Array(product.rating)].map((_, i) => (
-                    <i key={i} className="fas fa-star"></i>
+                    <FontAwesomeIcon key={i} icon={faStar} />
                   ))}
                 </div>
-                <h4>{product.price}</h4>
+                <h4>{formatCurrency(product.price)}</h4>
               </div>
-              <a href="#"><i className="fas fa-shopping-cart cart"></i></a>
+              <FontAwesomeIcon className="cart" icon="shopping-cart" />
             </Link>
           </div>
         ))}
