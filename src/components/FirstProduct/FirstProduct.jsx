@@ -1,6 +1,6 @@
 import './firstProduct.css';
 import { Link } from 'react-router-dom';
-import { useAppContext } from '../../../context/productsContext';
+import { useAppContext } from '../context/productsContext';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
