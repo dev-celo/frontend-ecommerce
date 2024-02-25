@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import './productDetail.css';
-import { useAppContext } from '../../../context/productsContext';
+import { useAppContext } from '../context/productsContext';
 import { useEffect } from 'react';
 import Cookies from 'js-cookie';
 import { useParams } from 'react-router-dom';
