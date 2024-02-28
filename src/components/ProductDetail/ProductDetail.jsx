@@ -19,6 +19,9 @@ function ProductDetail() {
     
     useEffect(() => {
         const storedSelectedProduct = Cookies.get('SelectedProduct');
+
+        window.scrollTo(0, 0); // Isso rolará a página para o topo quando o componente for montado
+
         if (productTypes[typeProduct]) {
             const product = productTypes[typeProduct][id];
             if (product) {
@@ -37,26 +40,27 @@ function ProductDetail() {
         return <p>Selecione um produto para ver os detalhes.</p>;
     }
 
-    console.log("Caminho da imagem:", selectedProduct.imgSrc);
+    const imgSrcFromCookie = selectedProduct.imgSrc.replace('.', '') || (Cookies.getJSON('SelectedProduct') && JSON.parse(Cookies.get('SelectedProduct')).imgSrc).replace('.', '');
+
     return (
         <section id="prodetails" className="section-p1">
             <div className="single-pro-img">
-                <img src={selectedProduct.imgSrc} width="100%" id="MainImage" alt={selectedProduct.title} />
+                <img src={`/ecommerce/public/${imgSrcFromCookie}`} width="100%" id="MainImage" alt={selectedProduct.title} />
                 <div className="small-img-group">
                     <div className="small-img-col">
-                        <img src={selectedProduct.imgSrc} width="100%" className="small-img" alt={ selectedProduct.title } />
+                        <img src={`/ecommerce/public/${imgSrcFromCookie}`} width="100%" className="small-img" alt={ selectedProduct.title } />
                     </div>
 
                     <div className="small-img-col">
-                        <img src={selectedProduct.imgSrc} width="100%" className="small-img" alt={ selectedProduct.title } />
+                        <img src={`/ecommerce/public/${imgSrcFromCookie}`} width="100%" className="small-img" alt={ selectedProduct.title } />
                     </div>
 
                     <div className="small-img-col">
-                        <img src={selectedProduct.imgSrc} width="100%" className="small-img" alt={ selectedProduct.title } />
+                        <img src={`/ecommerce/public/${imgSrcFromCookie}`} width="100%" className="small-img" alt={ selectedProduct.title } />
                     </div>
 
                     <div className="small-img-col">
-                        <img src={selectedProduct.imgSrc} width="100%" className="small-img" alt={ selectedProduct.title } />
+                        <img src={`/ecommerce/public/${imgSrcFromCookie}`} width="100%" className="small-img" alt={ selectedProduct.title } />
                     </div>
                 </div>
             </div>
@@ -94,7 +98,6 @@ ProductDetail.propTypes = {
         rating: PropTypes.number.isRequired,
         price: PropTypes.string.isRequired,
         details: PropTypes.string.isRequired,
-        // Adicione outras props conforme necessário
     }),
 };
 
