@@ -4,9 +4,11 @@ import logo from '/img/logo.png';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Nav, Navbar as NavbarBs, Button } from 'react-bootstrap';
+import { useShoppingCart } from '../context/shoppingCartContext';
 
 function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { cartQuantity, openCart } = useShoppingCart();
 
   useEffect(() => {
     const close = document.getElementById('close');
@@ -78,8 +80,26 @@ function Header() {
             <Nav.Link to="/ecommerce/contact" as={NavLink}>
               <li><a href="contact.html">Contact</a></li>
             </Nav.Link>
-            <Nav.Link to="/ecommerce/cart" as={NavLink}>
-              <li><a id="lg-bab" href="cart.html">Carrinho</a></li>
+            <Nav.Link to="/ecommerce/" as={NavLink} >
+              <li onClick={openCart}>
+                <a id="lg-bab" href="cart.html">Carrinho</a>
+                <div className="
+                  rounded-circle
+                  bg-danger d-flex 
+                  justify-content-center
+                  align-items-center
+                "
+                  style={{
+                    color: "white",
+                    width: "1.5rem",
+                    height: "1.5rem",
+                    position: "absolute",
+                    bottom: 0, right: 5,
+                    transform: "translate(25%, 25%)"
+                  }}>
+                  {cartQuantity}
+                </div>
+              </li>
             </Nav.Link>
             <Nav.Link to="/ecommerce/login" as={NavLink}>
               <li><a className="custom-button">Login</a></li>
@@ -105,7 +125,7 @@ function Header() {
           variant="outline-light"
           className="cart"
         >
-          <FontAwesomeIcon id="cart" icon="shopping-cart" />
+          <FontAwesomeIcon onClick={openCart} id="cart" icon="shopping-cart" />
           <div className="
             rounded-circle
             bg-danger d-flex 
@@ -119,8 +139,8 @@ function Header() {
               bottom: 15, right: 30,
               transform: "translate(25%, 25%)"
             }}>
-              3
-            </div>
+            {cartQuantity}
+          </div>
         </Button>
       </div>
     </NavbarBs>

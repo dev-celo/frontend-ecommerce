@@ -78,8 +78,8 @@ function ProductDetail() {
                 </select>
                 <input type="number" value="1" />
                 <button onClick={() => {
-                    increaseCartQuantity(selectedProduct.id)
                     cartItems(selectedProduct.id, selectedProduct.type)
+                    increaseCartQuantity(selectedProduct.id)
                 }} className="normal">Add To Cart</button>
                 <h4>Product Details</h4>
                 <span>{selectedProduct.details}</span>
