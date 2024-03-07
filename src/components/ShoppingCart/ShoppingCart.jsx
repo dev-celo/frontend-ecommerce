@@ -33,13 +33,19 @@ function ShoppingCart({ isOpen }) {
                         }
                         )
                     }
+                    <div>
+                        {
+                            listCart.length === 0 ?
+                            <p className="h5">Shopping cart is any!</p> : null
+                        }
+                    </div>
                     <div className="ms-auto fw-bold fs-5">
                         Total: {" "} {
                             listCart?.length > 0 &&
                             formatCurrency(listCart?.reduce((total, item) => {
                                 const cart = findItemById(item.id);
                                 return total + (Number(item?.price || 0) * cart?.quantity);
-                            }, 0))
+                            }, 0)) || 'R$0.00'
                         }
                     </div>
                 </Stack>
