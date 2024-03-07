@@ -4,27 +4,25 @@ import CartItem from "./CartItem";
 import formatCurrency from "../../utilities/formatCurrency";
 
 function ShoppingCart({ isOpen }) {
-    const { closeCart, cartItem } = useShoppingCart();
-
-    const STORAGE_KEY = 'list-cart';
-
-    const storedCart = localStorage.getItem(STORAGE_KEY);
-    const cartItems = JSON.parse(storedCart);
+    const { closeCart, cartItems, listCart } = useShoppingCart();
 
     const findItemById = (id) => {
-        return cartItem.find((item) => item.id === id)
+        const item = cartItems?.find((item) => item.id === id)
+        return item;
     }
 
     return (
         <Offcanvas show={isOpen} onHide={closeCart} placement="end">
             <Offcanvas.Header closeButton>
-                <Offcanvas.Title>Cart</Offcanvas.Title>
+                <Offcanvas.Title>
+                    <h3 className="display-4">Shopping Cart</h3>
+                </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
                 <Stack gap={3}>
                     {
-                        cartItems?.map((item) => {
-                            const cartItemQuantity = cartItem.find((cartItem) => cartItem.id === item.id);
+                        listCart?.map((item) => {
+                            const cartItemQuantity = cartItems?.find((cartItem) => cartItem.id === item.id);
                             return (
                                 <CartItem
                                     key={item.id}
@@ -36,9 +34,9 @@ function ShoppingCart({ isOpen }) {
                         )
                     }
                     <div className="ms-auto fw-bold fs-5">
-                        Total {
-                            cartItems?.length > 0 &&
-                            formatCurrency(cartItems?.reduce((total, item) => {
+                        Total: {" "} {
+                            listCart?.length > 0 &&
+                            formatCurrency(listCart?.reduce((total, item) => {
                                 const cart = findItemById(item.id);
                                 return total + (Number(item?.price || 0) * cart?.quantity);
                             }, 0))
