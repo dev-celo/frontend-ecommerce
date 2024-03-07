@@ -1,4 +1,4 @@
-import './firstProduct.css';
+import './productCard.css';
 import { Link } from 'react-router-dom';
 import { useAppContext } from '../context/productsContext';
 import PropTypes from 'prop-types';
@@ -7,9 +7,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import formatCurrency from '../../utilities/formatCurrency';
 import { useShoppingCart } from '../context/shoppingCartContext';
-
-export function FirstProduct(props) {
-  const { increaseCartQuantity, cartItems } = useShoppingCart();
+ 
+function ProductCard(props) {
+  const { increaseCartQuantity, listShoppingCart } = useShoppingCart();
   const { setSelectedProduct } = useAppContext();
   const { products } = props;
 
@@ -39,8 +39,8 @@ export function FirstProduct(props) {
               </div>
             </Link>
             <FontAwesomeIcon onClick={() => {
+              listShoppingCart(product.id, product.type)
               increaseCartQuantity(product.id)
-              cartItems(product.id, product.type)
             }} className="cart" icon="shopping-cart" />
           </div>
         ))}
@@ -49,7 +49,7 @@ export function FirstProduct(props) {
   );
 }
 
-FirstProduct.propTypes = {
+ProductCard.propTypes = {
   products: PropTypes.arrayOf(
     PropTypes.shape({
       imgSrc: PropTypes.string.isRequired,
@@ -61,3 +61,5 @@ FirstProduct.propTypes = {
     })
   ).isRequired,
 };
+
+export default ProductCard;
