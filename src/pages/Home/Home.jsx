@@ -1,7 +1,7 @@
 import { Banner } from "../../components/BannerDiscount/Banner";
 import { DoubleBanner } from "../../components/DoubleBanner/DoubleBanner";
 import Feature from "../../components/Feature/Feature";
-import { FirstProduct } from "../../components/FirstProduct/FirstProduct";
+import ProductCard from "../../components/ProductCard/ProductCard";
 import { Footer } from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header"
 import Hero from "../../components/Hero/Hero";
@@ -14,9 +14,9 @@ function Home() {
       <Header />
       <Hero />
       <Feature />
-      <FirstProduct products={shirts} />
+      <ProductCard products={shirts} />
       <Banner />
-      <FirstProduct products={others} />
+      <ProductCard products={others} />
       <DoubleBanner />
       <SmallBaners />
       <Footer />
