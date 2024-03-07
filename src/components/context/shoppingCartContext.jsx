@@ -12,18 +12,18 @@ export function useShoppingCart() {
 }
 
 export function ShoppingCartProvider({ children }) {
-    const [cartItem, setCartItem] = useLocalStorage("shopping-cart", []);
+    const [cartItems, setCartItems] = useLocalStorage("shopping-cart", []);
     const [listCart, setListCart] = useLocalStorage("list-cart", []);
     const [isOpen, setIsOpen] = useState(false);
 
     // principais funções do carrinho de compras
     function getItemQuantity(id) {
-        return cartItem.find(item => item.id == id)?.quantity || 0;
+        return cartItems.find(item => item.id == id)?.quantity || 0;
     }
 
     function increaseCartQuantity(id) {
-        setCartItem(currentItems => {
-            if (cartItem?.find(item => item.id === id) == null) {
+        setCartItems(currentItems => {
+            if (cartItems?.find(item => item.id === id) == null) {
                 return [...currentItems, { id, quantity: 1 }]
             } else {
                 return currentItems?.map(item => {
@@ -38,8 +38,8 @@ export function ShoppingCartProvider({ children }) {
     }
 
     function decreaseCartQuantity(id) {
-        setCartItem(currentItems => {
-            if (cartItem.find(item => item.id === id)?.quantity === 1) {
+        setCartItems(currentItems => {
+            if (cartItems.find(item => item.id === id)?.quantity === 1) {
                 return currentItems.filter(item => item.id !== id)
             } else {
                 return currentItems?.map(item => {
@@ -62,15 +62,13 @@ export function ShoppingCartProvider({ children }) {
 
         localStorage.setItem(STORAGE_KEY, JSON.stringify(newCartItems));
 
-        setCartItem((currentItems) => currentItems.filter(item => item.id !== id))
-            
+        setCartItems((currentItems) => currentItems.filter(item => item.id !== id))
         setListCart(newCartItems);
-        console.log("listCart", listCart);
     }
 
-    const cartQuantity = cartItem?.reduce((quantity, item) => item.quantity + quantity, 0) || 0;
+    const cartQuantity = cartItems?.reduce((quantity, item) => item.quantity + quantity, 0) || 0;
 
-    function cartItems(id, productType) {
+    function listShoppingCart(id, productType) {
         // Decide de qual array de produtos fazer a busca com base no tipo
         const productsArray = productType === 'shirts' ? shirts : (productType === 'others' ? others : []);
         // Encontra o item no array de produtos
@@ -91,11 +89,12 @@ export function ShoppingCartProvider({ children }) {
             increaseCartQuantity,
             decreaseCartQuantity,
             removeFromCart,
-            cartItem,
-            cartQuantity,
             cartItems,
+            cartQuantity,
+            listShoppingCart,
             openCart,
-            closeCart
+            closeCart,
+            listCart
         }}>
             {children}
             <ShoppingCart isOpen={isOpen} />
