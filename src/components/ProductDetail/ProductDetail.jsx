@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import './productDetail.css';
 import { useAppContext } from '../context/productsContext';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import { useParams } from 'react-router-dom';
 import { shirts, others } from '../data/productsData';
 import { useShoppingCart } from '../context/shoppingCartContext';
+import formatCurrency from '../../utilities/formatCurrency';
 
 // eslint-disable-next-line react-hooks/exhaustive-deps
 const productTypes = {
@@ -13,9 +14,12 @@ const productTypes = {
     others
 };
 function ProductDetail() {
-    const { increaseCartQuantity, cartItems } = useShoppingCart();
+    const { increaseCartQuantity, listShoppingCart } = useShoppingCart();
     const { selectedProduct, setSelectedProduct } = useAppContext();
     const { id, typeProduct } = useParams();
+    const [productQuantity, setProductQuantity] = useState(1);
+    const [selectedSize, setSelectedSize] = useState("");
+    
     
     useEffect(() => {
         const storedSelectedProduct = Cookies.get('SelectedProduct');
@@ -41,6 +45,15 @@ function ProductDetail() {
     }
 
     const imgSrcFromCookie = selectedProduct.imgSrc.replace('.', '') || (Cookies.getJSON('SelectedProduct') && JSON.parse(Cookies.get('SelectedProduct')).imgSrc).replace('.', '');
+
+    const handleInputChange = (event) => {
+        const valor = parseInt(event.target.value);
+        setProductQuantity(valor);
+    }
+
+    const handleSizeChange = (event) => {
+        setSelectedSize(event.target.value);
+    };
 
     return (
         <section id="prodetails" className="section-p1">
@@ -68,18 +81,22 @@ function ProductDetail() {
             <div className="single-pro-details">
                 <h6>{selectedProduct.title}</h6>
                 <h4>{selectedProduct.brand}</h4>
-                <h2>{selectedProduct.price}</h2>
-                <select name="#" id="">
+                <h2>{formatCurrency(selectedProduct.price)}</h2>
+                <select name="size" id="size" value={selectedSize} onChange={handleSizeChange} >
                     <option >Select Size</option>
                     <option >XL</option>
                     <option >XXL</option>
                     <option >Small</option>
                     <option >Large</option>
                 </select>
-                <input type="number" value="1" />
+                <input
+                    type="number"
+                    value={productQuantity} 
+                    onChange={handleInputChange} 
+                />
                 <button onClick={() => {
-                    cartItems(selectedProduct.id, selectedProduct.type)
-                    increaseCartQuantity(selectedProduct.id)
+                    increaseCartQuantity(selectedProduct.id, productQuantity, selectedSize)
+                    listShoppingCart(selectedProduct.id, selectedProduct.type)
                 }} className="normal">Add To Cart</button>
                 <h4>Product Details</h4>
                 <span>{selectedProduct.details}</span>
