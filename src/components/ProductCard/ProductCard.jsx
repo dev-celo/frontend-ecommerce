@@ -6,10 +6,8 @@ import Cookies from 'js-cookie';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import formatCurrency from '../../utilities/formatCurrency';
-import { useShoppingCart } from '../context/shoppingCartContext';
  
 function ProductCard(props) {
-  const { increaseCartQuantity, listShoppingCart } = useShoppingCart();
   const { setSelectedProduct } = useAppContext();
   const { products } = props;
 
@@ -37,11 +35,8 @@ function ProductCard(props) {
                 </div>
                 <h4>{formatCurrency(product.price)}</h4>
               </div>
+              <FontAwesomeIcon className="cart" icon="shopping-cart" />
             </Link>
-            <FontAwesomeIcon onClick={() => {
-              listShoppingCart(product.id, product.type)
-              increaseCartQuantity(product.id)
-            }} className="cart" icon="shopping-cart" />
           </div>
         ))}
       </div>
