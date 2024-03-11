@@ -15,6 +15,12 @@ export function ShoppingCartProvider({ children }) {
     const [cartItems, setCartItems] = useLocalStorage("shopping-cart", []);
     const [listCart, setListCart] = useLocalStorage("list-cart", []);
     const [isOpen, setIsOpen] = useState(false);
+    const [selectedSize, setSelectedSize] = useState("");
+
+    const setSizeProduct = (newSize) => {
+        console.log("newSize",newSize);
+        setSelectedSize(newSize)
+    }
 
     // principais funções do carrinho de compras
     function getItemQuantity(id) {
@@ -23,25 +29,26 @@ export function ShoppingCartProvider({ children }) {
 
     function increaseCartQuantity(id, quantity, size) {
         setCartItems(currentItems => {
-            // Verifica se já existe um item no carrinho com o mesmo ID e tamanho
-            const existingItemIndex = currentItems.findIndex(item => item.id === id && item.size === size);
-    
-            // Se não houver um item com o mesmo ID e tamanho no carrinho
-            if (existingItemIndex === -1) {
-                // Adiciona um novo item ao carrinho com o ID, quantidade e tamanho fornecidos
-                return [...currentItems, { id, quantity, size }];
-            } else {
-                // Se já houver um item com o mesmo ID e tamanho no carrinho
-                // Atualiza apenas a quantidade do item existente
-                const updatedItems = [...currentItems];
-                updatedItems[existingItemIndex] = {
-                    ...updatedItems[existingItemIndex],
-                    quantity: updatedItems[existingItemIndex].quantity + quantity
-                };
-                return updatedItems;
-            }
-        });
-    
+        console.log("size",size);
+
+        // Verifica se já existe um item no carrinho com o mesmo ID e tamanho
+        const existingItemIndex = currentItems.findIndex(item => item.id === id && item.size === size || (listCart.find(cartItem => cartItem.id === id && cartItem.size === size)));
+
+        // Se não houver um item com o mesmo ID e tamanho no carrinho
+        if (existingItemIndex === -1) {
+            // Adiciona um novo item ao carrinho com o ID, quantidade e tamanho fornecidos
+            return [...currentItems, { id, quantity, size }];
+        } else {
+            // Se já houver um item com o mesmo ID e tamanho no carrinho
+            // Atualiza apenas a quantidade do item existente
+            const updatedItems = [...currentItems];
+            updatedItems[existingItemIndex] = {
+                ...updatedItems[existingItemIndex],
+                quantity: updatedItems[existingItemIndex].quantity + 1
+            };
+            return updatedItems;
+        }
+    });
     }
 
     function decreaseCartQuantity(id) {
@@ -81,8 +88,17 @@ export function ShoppingCartProvider({ children }) {
         // Encontra o item no array de produtos
         const selectedItem = productsArray.find(item => item.id === id);
         
-        if (!listCart.some(item => item.id === selectedItem.id)) {
-            setListCart((currentItems) => [...currentItems, selectedItem])
+        if (selectedItem) {
+            const existingItemIndex = listCart.findIndex(item => item.id === selectedItem.id && item.size === selectedSize)
+            if (existingItemIndex === -1) {
+                setListCart((currentItems) => [...currentItems, { ...selectedItem, size: selectedSize }])
+            }
+            else {
+                const updatedItems = [...listCart]
+
+                updatedItems[existingItemIndex] = { ...updatedItems[existingItemIndex], size: selectedSize }
+                setListCart(updatedItems)
+            }
         }
     }
 
@@ -101,7 +117,9 @@ export function ShoppingCartProvider({ children }) {
             listShoppingCart,
             openCart,
             closeCart,
-            listCart
+            listCart,
+            selectedSize,
+            setSizeProduct
         }}>
             {children}
             <ShoppingCart isOpen={isOpen} />
