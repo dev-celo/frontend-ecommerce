@@ -7,10 +7,10 @@ import { useEffect, useState } from "react";
 
 
 
-function CartItem({ id, imgSrc, title, quantity, price },) {
+function CartItem({ id, imgSrc, title, quantity, price }) {
     const { removeFromCart, selectedSize } = useShoppingCart();
     const [displayQuantity, setDisplayQuantity] = useState(quantity);
-
+    
     useEffect(() => {
         // Verifica se há uma diferença antes de atualizar o estado local
         if (quantity !== displayQuantity) {
