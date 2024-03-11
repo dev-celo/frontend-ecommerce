@@ -14,12 +14,10 @@ const productTypes = {
     others
 };
 function ProductDetail() {
-    const { increaseCartQuantity, listShoppingCart } = useShoppingCart();
+    const { increaseCartQuantity, listShoppingCart, selectedSize, setSizeProduct } = useShoppingCart();
     const { selectedProduct, setSelectedProduct } = useAppContext();
     const { id, typeProduct } = useParams();
     const [productQuantity, setProductQuantity] = useState(1);
-    const [selectedSize, setSelectedSize] = useState("");
-    
     
     useEffect(() => {
         const storedSelectedProduct = Cookies.get('SelectedProduct');
@@ -52,7 +50,7 @@ function ProductDetail() {
     }
 
     const handleSizeChange = (event) => {
-        setSelectedSize(event.target.value);
+        setSizeProduct(event.target.value);
     };
 
     return (
@@ -83,16 +81,16 @@ function ProductDetail() {
                 <h4>{selectedProduct.brand}</h4>
                 <h2>{formatCurrency(selectedProduct.price)}</h2>
                 <select name="size" id="size" value={selectedSize} onChange={handleSizeChange} >
-                    <option >Select Size</option>
-                    <option >XL</option>
-                    <option >XXL</option>
-                    <option >Small</option>
-                    <option >Large</option>
+                    <option>Select Size</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                    <option>Small</option>
+                    <option>Large</option>
                 </select>
                 <input
                     type="number"
                     value={productQuantity} 
-                    onChange={handleInputChange} 
+                    onChange={handleInputChange}
                 />
                 <button onClick={() => {
                     increaseCartQuantity(selectedProduct.id, productQuantity, selectedSize)
