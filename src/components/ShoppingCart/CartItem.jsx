@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 
 function CartItem({ id, imgSrc, title, quantity, price },) {
-    const { removeFromCart } = useShoppingCart();
+    const { removeFromCart, selectedSize } = useShoppingCart();
     const [displayQuantity, setDisplayQuantity] = useState(quantity);
 
     useEffect(() => {
@@ -54,7 +54,7 @@ function CartItem({ id, imgSrc, title, quantity, price },) {
                     formatCurrency(price * quantity)
                 }
             </div>
-            <IncreaseProduct id={id} quantity={quantity} />
+            <IncreaseProduct id={id} quantity={quantity} size={selectedSize} />
             <Button variant="outline-danger" onClick={() => removeFromCart(id)}>&times;</Button>
         </Stack>
     )
