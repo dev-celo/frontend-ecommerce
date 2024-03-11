@@ -3,20 +3,18 @@ import formatCurrency from "../../utilities/formatCurrency";
 import { useShoppingCart } from "../context/shoppingCartContext";
 import DecreaseProduct from "../Buttons/DecreaseProduct";
 import IncreaseProduct from "../Buttons/IncreaseProduct";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 
 
-function CartItem({ id, imgSrc, title, quantity, price }) {
+
+function CartItem({ id, imgSrc, title, quantity, price, size }) {
     const { removeFromCart, selectedSize } = useShoppingCart();
-    const [displayQuantity, setDisplayQuantity] = useState(quantity);
-    
+
     useEffect(() => {
-        // Verifica se há uma diferença antes de atualizar o estado local
-        if (quantity !== displayQuantity) {
-            setDisplayQuantity(quantity);
-        }
-    }, [quantity, displayQuantity]);
+        // Additional logic for updates related to 'price' or 'size'
+        // You can add more logic here as needed
+      }, [price, size]);
 
 
     return (
@@ -35,9 +33,9 @@ function CartItem({ id, imgSrc, title, quantity, price }) {
                 <div style={{ maxWidth: "50%" }}>
                     {title}{" "}
                     {
-                        displayQuantity > 1 ? (
+                        quantity > 1 ? (
                             <span className="text-muted" style={{ fontSize: "1rem" }}>
-                                x{displayQuantity}
+                                x{quantity}
                             </span>
                         ) : null
                     }
@@ -46,6 +44,9 @@ function CartItem({ id, imgSrc, title, quantity, price }) {
                     {
                         formatCurrency(price)
                     }
+                </div>
+                <div className="text-muted" style={{ fontSize: "1rem" }}>
+                    Size: {size}
                 </div>
             </div>
             <DecreaseProduct id={id} quantity={quantity} />
