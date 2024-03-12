@@ -124,8 +124,9 @@ function Header() {
           style={{ width: "4rem", height: "4rem" }}
           variant="outline-light"
           className="cart"
+          onClick={openCart}
         >
-          <FontAwesomeIcon onClick={openCart} id="cart" icon="shopping-cart" />
+          <FontAwesomeIcon id="cart" icon="shopping-cart" />
           <div className="
             rounded-circle
             bg-danger d-flex 
