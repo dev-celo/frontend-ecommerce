@@ -114,7 +114,7 @@ function Header() {
         {
           isMobile() ? (
             <Nav>
-              <Nav.Link to="/ecommerce" as={NavLink}>
+              <Nav.Link to="/ecommerce/" as={NavLink}>
                 <img src={logo} className="logo" alt="Cura logo da página" />
               </Nav.Link>
             </Nav>
