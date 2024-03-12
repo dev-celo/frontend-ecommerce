@@ -14,7 +14,7 @@ function CartItem({ id, imgSrc, title, quantity, price, size }) {
     useEffect(() => {
         // Additional logic for updates related to 'price' or 'size'
         // You can add more logic here as needed
-      }, [price, size]);
+      }, [price, size, quantity]);
 
 
     return (
