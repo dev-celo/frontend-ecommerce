@@ -1,0 +1,21 @@
+/* Adicione este CSS no seu arquivo de estilo */
+
+.nav-link {
+  font-size: 18px !important;
+  color: #333 !important;
+  text-decoration: none !important;
+  padding: 10px !important;
+  transition: color 0.3s ease !important;
+}
+
+.nav-link:hover {
+  color: #666 !important;
+}
+
+.login {
+  font-size: 18px !important;
+  text-decoration: none !important;
+  padding: 10px !important;
+  transition: color 0.3s ease !important;
+  color: rgb(65, 105, 225) !important;
+}
