@@ -1,150 +1,57 @@
-import { useState, useEffect } from 'react';
-import './header.css';
-import logo from '/img/logo.png';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Nav, Navbar as NavbarBs, Button } from 'react-bootstrap';
 import { useShoppingCart } from '../context/shoppingCartContext';
+import logo from '/img/logo.png';
+import './header.css';
 
 function Header() {
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { cartQuantity, openCart } = useShoppingCart();
-
-  useEffect(() => {
-    const close = document.getElementById('close');
-    let bar = document.getElementById('bar');
-
-
-    const openBar = () => {
-      setMobileMenuOpen(true);
-      bar.style.display = 'none';
-      close.style.display = 'flex';
-    };
-
-    const closeBar = () => {
-      setMobileMenuOpen(false);
-      close.style.display = 'none';
-      bar.style.display = 'flex';
-    };
-
-    if (close) {
-      close.addEventListener('click', closeBar);
-    }
-
-    if (bar) {
-      bar.addEventListener('click', openBar);
-    }
-
-    return () => {
-      if (close) {
-        close.removeEventListener('click', closeBar);
-      }
-
-      if (bar) {
-        bar.removeEventListener('click', openBar);
-      }
-    };
-  }, []);
-
-  function isMobile() {
-    return window.innerWidth <= 900; // Defina o ponto de interrupção de largura de acordo com suas necessidades
-  }
+  const { cartQuantity, openCart, openBar } = useShoppingCart();
 
   return (
     <NavbarBs sticky="top" className="shadow-sm" id="header">
-      {
-        !isMobile() ? (
-          <Nav className="">
-            <Nav.Link to="/ecommerce/" as={NavLink}>
-              <img src={logo} className="logo" alt="Cura logo da página" />
-            </Nav.Link>
-          </Nav>
-        ) : null
-      }
-
-      <div>
-        <ul id="navbar" className={isMobileMenuOpen ? 'active' : ''}>
-          <Nav>
-            <Nav.Link to="/ecommerce/" as={NavLink}>
-              <li><a className="active" href="index.html">Home</a></li>
-            </Nav.Link>
-            <Nav.Link to="/ecommerce/shop" as={NavLink}>
-              <li><a href="shop.html">Shop</a></li>
-            </Nav.Link>
-            <Nav.Link to="/ecommerce/blog" as={NavLink}>
-              <li><a href="blog.html">Blog</a></li>
-            </Nav.Link>
-            <Nav.Link to="/ecommerce/about" as={NavLink}>
-              <li><a href="about.html">About</a></li>
-            </Nav.Link>
-            <Nav.Link to="/ecommerce/contact" as={NavLink}>
-              <li><a href="contact.html">Contact</a></li>
-            </Nav.Link>
-            <Nav.Link to="/ecommerce/" as={NavLink} >
-              <li onClick={openCart}>
-                <a id="lg-bab" href="cart.html">Carrinho</a>
-                <div className="
-                  rounded-circle
-                  bg-danger d-flex 
-                  justify-content-center
-                  align-items-center
-                "
-                  style={{
-                    color: "white",
-                    width: "1.5rem",
-                    height: "1.5rem",
-                    position: "absolute",
-                    bottom: 0, right: 5,
-                    transform: "translate(25%, 25%)"
-                  }}>
-                  {cartQuantity}
-                </div>
-              </li>
-            </Nav.Link>
-            <Nav.Link to="/ecommerce/login" as={NavLink}>
-              <li><a className="custom-button">Login</a></li>
-            </Nav.Link>
-          </Nav>
-        </ul>
-      </div>
-
       <div id="mobile">
-        <FontAwesomeIcon id="bar" icon="bars" />
-        <FontAwesomeIcon id="close" style={{ display: 'none' }} icon="times" />
-        {
-          isMobile() ? (
-            <Nav>
-              <Nav.Link to="/ecommerce/" as={NavLink}>
-                <img src={logo} className="logo" alt="Cura logo da página" />
-              </Nav.Link>
-            </Nav>
-          ) : null
-        }
-        <Button
-          style={{ width: "4rem", height: "4rem" }}
-          variant="outline-light"
-          className="cart"
-          onClick={openCart}
-        >
-          <FontAwesomeIcon id="cart" icon="shopping-cart" />
-          <div className="
-            rounded-circle
-            bg-danger d-flex 
-            justify-content-center
-            align-items-center"
-            style={{
-              color: "white",
-              width: "1.5rem",
-              height: "1.5rem",
-              position: "absolute",
-              bottom: 15, right: 30,
-              transform: "translate(25%, 25%)"
-            }}>
+      <Button id="bar" style={{ width: "4rem", height: "4rem" }} variant="none" data-testid="bar" className="bar" onClick={openBar}>
+        <FontAwesomeIcon onClick={openBar} data-testid="bar" id="bar" icon="bars" />
+      </Button>  
+        <Nav>
+          <Nav.Link to="/ecommerce/" as={NavLink}>
+            <img id="logo" src={logo} className="logo" alt="Cura logo da página" />
+          </Nav.Link>
+        </Nav>
+        <Button id="cart" data-testid="shopping-cart" style={{ width: "4rem", height: "4rem" }} variant="outline-light" className="cart" onClick={openCart}>
+          <FontAwesomeIcon id="cart" data-testid="shopping-cart" icon="shopping-cart" />
+          <div className="rounded-circle bg-danger d-flex justify-content-center align-items-center" style={{ color: "white", width: "1.5rem", height: "1.5rem", position: "absolute", bottom: 15, right: 30, transform: "translate(25%, 25%)", fontSize: "1.1rem" }}>
             {cartQuantity}
           </div>
         </Button>
       </div>
+
+      <div>
+        <ul id="navbar">
+          <Nav>
+            <NavItem link="/ecommerce/" text="Home" />
+            <NavItem link="/ecommerce/shop/" text="Shop" />
+            <NavItem link="/ecommerce/blog/" text="Blog" />
+            <NavItem link="/ecommerce/about/" text="About" />
+            <NavItem link="/ecommerce/contact/" text="Contact" />
+            <NavItem link="/ecommerce/" handleClick={openCart} text="Cart" />
+            <NavItem link="/ecommerce/login" text="Login" className="custom-button" />
+          </Nav>
+        </ul>
+      </div>
     </NavbarBs>
+  );
+}
+
+// Componente de item de menu
+function NavItem({ link, text, className, handleClick }) {
+  return (
+    <Nav.Link to={link} as={NavLink}>
+      <li>
+        <a onClick={handleClick} className={className}>{text}</a>
+      </li>
+    </Nav.Link>
   );
 }
 
