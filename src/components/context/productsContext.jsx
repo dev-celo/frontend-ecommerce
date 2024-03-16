@@ -4,6 +4,11 @@ import { createContext, useContext, useState } from 'react';
 
 const AppContext = createContext();
 
+// eslint-disable-next-line react-refresh/only-export-components
+export function useAppContext() {
+  return useContext(AppContext);
+}
+
 // eslint-disable-next-line react/prop-types
 export function AppProvider({ children }) {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -13,9 +18,4 @@ export function AppProvider({ children }) {
       {children}
     </AppContext.Provider>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
   );
-}
-
-// eslint-disable-next-line react-refresh/only-export-components
-export function useAppContext() {
-  return useContext(AppContext);
 }
