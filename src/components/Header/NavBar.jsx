@@ -7,9 +7,9 @@ function NavBar({ isOpen }) {
     const { closeBar } = useShoppingCart();
 
     return (
-        <section id="navbar-componen" data-testid="navbar-componen">
-            <Offcanvas show={isOpen} onHide={closeBar} placement="start">
-                <Offcanvas.Header closeButton>
+        <section id="navbar-component" data-testid="navbar-component">
+            <Offcanvas show={isOpen} onHide={closeBar()} placement="start" data-testid="close-button" >
+                <Offcanvas.Header closeButton >
                     <Offcanvas.Title>
                         <h3 className="display-4">NavBar</h3>
                     </Offcanvas.Title>
