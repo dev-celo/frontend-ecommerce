@@ -2,6 +2,7 @@ import { render, fireEvent, waitFor } from '@testing-library/react';
 import NavBar from '../../../src/components/Header/NavBar';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { vi } from "vitest"
+import Header from '../../../src/components/Header/Header';
 
 // Mock do closeBar
 const closeBarMock = vi.fn();
@@ -49,7 +50,7 @@ describe('NavBar Component Tests', () => {
     test('Navbar is closed by default', () => {
         const { queryByTestId } = render(
             <Router>
-                <NavBar isOpen={false} />
+                <Header />
             </Router>
         );
 
@@ -58,7 +59,7 @@ describe('NavBar Component Tests', () => {
         expect(navbarElement).toBeNull();
     });
 
-    test.only('Clicking close button calls closeBar function', async () => {
+    test('Clicking close button calls closeBar function', async () => {
         const { getByTestId } = render(
             <Router>
                 <NavBar isOpen={true} />
