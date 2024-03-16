@@ -10,7 +10,7 @@ import {  shirts, others } from "../../components/data/productsData";
 
 function Home() {
   return (
-    <>
+    <section id="home-page" data-testid="home-page">
       <Header />
       <Hero />
       <Feature />
@@ -20,7 +20,7 @@ function Home() {
       <DoubleBanner />
       <SmallBaners />
       <Footer />
-    </>
+    </section>
   )
 }
 
