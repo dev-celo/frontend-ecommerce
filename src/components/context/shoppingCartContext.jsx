@@ -3,6 +3,7 @@ import { shirts, others } from "../../components/data/productsData";
 import PropTypes from "prop-types";
 import ShoppingCart from "../ShoppingCart/ShoppingCart";
 import useLocalStorage from "../hooks/useLocalStorage";
+import NavBar from "../Header/NavBar";
 
 const shoppingCartContext = createContext({});
 
@@ -15,7 +16,9 @@ export function ShoppingCartProvider({ children }) {
     const [cartItems, setCartItems] = useLocalStorage("shopping-cart", []);
     const [listCart, setListCart] = useLocalStorage("list-cart", []);
     const [isOpen, setIsOpen] = useState(false);
+    const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [selectedSize, setSelectedSize] = useState("");
+
 
     const setSizeProduct = (newSize) => {
         setSelectedSize(newSize)
@@ -103,6 +106,10 @@ export function ShoppingCartProvider({ children }) {
 
     const closeCart = () => setIsOpen(false);
 
+    const openBar = () => setMobileMenuOpen(true)
+      
+    const closeBar = () => setMobileMenuOpen(false);
+
     return (
         <shoppingCartContext.Provider value={{
             getItemQuantity,
@@ -116,10 +123,13 @@ export function ShoppingCartProvider({ children }) {
             closeCart,
             listCart,
             selectedSize,
-            setSizeProduct
+            setSizeProduct,
+            openBar,
+            closeBar
         }}>
             {children}
             <ShoppingCart isOpen={isOpen} />
+            <NavBar isOpen={isMobileMenuOpen} />
         </shoppingCartContext.Provider>
     )
 }
