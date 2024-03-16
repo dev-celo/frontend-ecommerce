@@ -6,7 +6,9 @@ module.exports = {
     "describe": true,
     "expect": true,
     "jest": true,
-    "beforeEach": true
+    "beforeEach": true,
+    "module": true,
+    "beforeAll": true
   },
   extends: [
     'eslint:recommended',
