@@ -7,13 +7,14 @@ import Header from "../../components/Header/Header"
 import Hero from "../../components/Hero/Hero";
 import { SmallBaners } from "../../components/SmallBanners/SmallBanners";
 import {  shirts, others } from "../../components/data/productsData";
+import { features } from "../../components/data/featureData";
 
 function Home() {
   return (
     <section id="home-page" data-testid="home-page">
       <Header />
       <Hero />
-      <Feature />
+      <Feature features={ features } />
       <ProductCard products={shirts} />
       <Banner />
       <ProductCard products={others} />
