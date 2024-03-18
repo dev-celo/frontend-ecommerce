@@ -2,7 +2,7 @@ import { Banner } from "../../components/BannerDiscount/Banner";
 import { DoubleBanner } from "../../components/DoubleBanner/DoubleBanner";
 import Feature from "../../components/Feature/Feature";
 import ProductCard from "../../components/ProductCard/ProductCard";
-import { Footer } from "../../components/Footer/Footer";
+import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header"
 import Hero from "../../components/Hero/Hero";
 import { SmallBaners } from "../../components/SmallBanners/SmallBanners";
