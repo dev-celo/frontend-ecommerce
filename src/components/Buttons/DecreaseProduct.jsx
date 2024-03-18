@@ -7,7 +7,7 @@ function DecreaseProduct({id, quantity}) {
         <div>
             {
                 quantity > 1 && (
-                    <Button variant="outline-dark" onClick={() => decreaseCartQuantity(id)}>-</Button>
+                    <Button id="decrease-button" data-testid="decrease-button" variant="outline-dark" onClick={() => decreaseCartQuantity(id)}>-</Button>
                 )
             }
         </div>
