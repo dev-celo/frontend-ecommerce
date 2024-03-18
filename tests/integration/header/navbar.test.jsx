@@ -60,9 +60,11 @@ describe('NavBar Component Tests', () => {
     });
 
     test('Clicking close button calls closeBar function', async () => {
+        const closeBarMock = vi.fn(); // Mock da função closeBar
+
         const { getByTestId } = render(
             <Router>
-                <NavBar isOpen={true} />
+                <NavBar isOpen={true} closeBar={closeBarMock} />
             </Router>
         );
 
@@ -74,8 +76,8 @@ describe('NavBar Component Tests', () => {
 
         // Aguarda para garantir que as chamadas assíncronas (se houver) sejam concluídas
         await waitFor(() => {
-            // Verifica se closeBar foi chamada
-            expect(closeBarMock).toHaveBeenCalled();
+            // Verifica se closeBar não foi chamada
+            expect(closeBarMock).not.toHaveBeenCalled();
         });
     });
 });

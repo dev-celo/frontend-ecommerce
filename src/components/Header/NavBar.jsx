@@ -8,7 +8,7 @@ function NavBar({ isOpen }) {
 
     return (
         <section id="navbar-component" data-testid="navbar-component">
-            <Offcanvas show={isOpen} onHide={closeBar()} placement="start" data-testid="close-button" >
+            <Offcanvas show={isOpen} onHide={closeBar} placement="start" data-testid="close-button" >
                 <Offcanvas.Header closeButton >
                     <Offcanvas.Title>
                         <h3 className="display-4">NavBar</h3>
