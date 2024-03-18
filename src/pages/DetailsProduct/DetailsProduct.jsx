@@ -4,11 +4,11 @@ import ProductDetail from "../../components/ProductDetail/ProductDetail";
 
 function DetailsProduct() {
     return (
-        <>
+        <section id="details-page" data-testid="details-page">
             <Header />
             <ProductDetail />
             <Footer />
-        </>
+        </section>
     )
 }
 

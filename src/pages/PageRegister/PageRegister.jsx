@@ -4,7 +4,7 @@ import './pageRegister.css';
 
 function PageRegister() {
     return (
-        <section>
+        <section id="register-page" data-testid="register-page">
             <div className="container-register">
                 <div className="header">
                     <Header />
