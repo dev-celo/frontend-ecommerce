@@ -1,10 +1,13 @@
-import './firstProduct.css';
+import './productCard.css';
 import { Link } from 'react-router-dom';
-import { useAppContext } from '../../../context/productsContext';
+import { useAppContext } from '../context/productsContext';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
-
-export function FirstProduct(props) {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import formatCurrency from '../../utilities/formatCurrency';
+ 
+function ProductCard(props) {
   const { setSelectedProduct } = useAppContext();
   const { products } = props;
 
@@ -27,12 +30,12 @@ export function FirstProduct(props) {
                 <h5>{product.title}</h5>
                 <div className="star">
                   {[...Array(product.rating)].map((_, i) => (
-                    <i key={i} className="fas fa-star"></i>
+                    <FontAwesomeIcon key={i} icon={faStar} />
                   ))}
                 </div>
-                <h4>{product.price}</h4>
+                <h4>{formatCurrency(product.price)}</h4>
               </div>
-              <a href="#"><i className="fas fa-shopping-cart cart"></i></a>
+              <FontAwesomeIcon className="cart" icon="shopping-cart" />
             </Link>
           </div>
         ))}
@@ -41,7 +44,7 @@ export function FirstProduct(props) {
   );
 }
 
-FirstProduct.propTypes = {
+ProductCard.propTypes = {
   products: PropTypes.arrayOf(
     PropTypes.shape({
       imgSrc: PropTypes.string.isRequired,
@@ -53,3 +56,5 @@ FirstProduct.propTypes = {
     })
   ).isRequired,
 };
+
+export default ProductCard;

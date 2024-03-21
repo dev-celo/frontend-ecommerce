@@ -26,3 +26,11 @@ dist-ssr
 *.sw?
 /.history/
 dist/index.html
+
+# Jest and React Testing Library
+coverage/
+# Add if using TypeScript
+*.tsbuildinfo
+# Add if using Next.js
+.next/
+out/

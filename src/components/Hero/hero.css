@@ -29,7 +29,7 @@
 }
 
 #hero button {
-  background-image: url(./img/hero4.png);
+  background-image: url(/img/button.png);
   background-position: center;
   background-color: transparent;
   background-repeat: no-repeat;

@@ -7,7 +7,7 @@ export const shirts = [
     brand: "Adidas",
     title: "Cartoon Astronaut T-shirts",
     rating: 5,
-    price: "$78",
+    price: "78",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel justo nec nulla dictum rutrum. Vestibulum non metus nec justo consectetur luctus."
   },
   {
@@ -17,7 +17,7 @@ export const shirts = [
     brand: "Nike",
     title: "Graphic Print Hoodie",
     rating: 4,
-    price: "$60",
+    price: "60",
     details: "Sed sit amet odio nec elit tincidunt euismod. Vestibulum vel orci ut nisl auctor auctor ut vel libero."
   },
   {
@@ -27,7 +27,7 @@ export const shirts = [
     brand: "Puma",
     title: "Sporty Jogger Pants",
     rating: 4,
-    price: "$45",
+    price: "45",
     details: "Curabitur vitae justo non nisl efficitur dapibus. Ut condimentum purus ut mi tincidunt, vel rhoncus turpis vulputate."
   },
   {
@@ -37,7 +37,7 @@ export const shirts = [
     brand: "Adidas",
     title: "Running Shoes",
     rating: 5,
-    price: "$90",
+    price: "90",
     details: "Fusce in mauris quis dui fermentum sagittis. Phasellus eget felis vel erat scelerisque fermentum non id nulla."
   },
   {
@@ -47,7 +47,7 @@ export const shirts = [
     brand: "Nike",
     title: "Casual Sneakers",
     rating: 4,
-    price: "$70",
+    price: "70",
     details: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer ut augue ligula."
   },
   {
@@ -57,7 +57,7 @@ export const shirts = [
     brand: "Puma",
     title: "Classic Baseball Cap",
     rating: 5,
-    price: "$20",
+    price: "20",
     details: "Vivamus id justo vel ipsum scelerisque auctor. In hac habitasse platea dictumst. Integer ac volutpat libero."
   },
   {
@@ -67,7 +67,7 @@ export const shirts = [
     brand: "Adidas",
     title: "Gym Duffle Bag",
     rating: 4,
-    price: "$35",
+    price: "35",
     details: "Morbi euismod turpis nec leo ultricies, non hendrerit lectus cursus. Ut finibus, velit sit amet laoreet interdum, dui nisi eleifend elit."
   },
   {
@@ -77,82 +77,82 @@ export const shirts = [
     brand: "Nike",
     title: "Tech-Fit Compression Leggings",
     rating: 5,
-    price: "$55",
+    price: "55",
     details: "Maecenas id lectus eu urna tempor fermentum. Etiam in dolor id sem tristique eleifend eu vel ante."
   },
 ];
 
 export const others = [
   {
-    id: 0,
+    id: 8,
     type: "others",
     imgSrc: "./img/products/n1.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
     rating: 5,
-    price: "$78",
+    price: "78",
   },
   {
-    id: 1,
+    id: 9,
     type: "others",
     imgSrc: "./img/products/n2.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
     rating: 5,
-    price: "$78",
+    price: "78",
   },
   {
-    id: 2,
+    id: 10,
     type: "others",
     imgSrc: "./img/products/n3.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
     rating: 5,
-    price: "$78",
+    price: "78",
   },
   {
-    id: 3,
+    id: 11,
     type: "others",
     imgSrc: "./img/products/n4.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
     rating: 5,
-    price: "$78",
+    price: "78",
   },
   {
-    id: 4,
+    id: 12,
     type: "others",
     imgSrc: "./img/products/n5.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
     rating: 5,
-    price: "$78",
+    price: "78",
   },
   {
-    id: 5,
+    id: 13,
     type: "others",
     imgSrc: "./img/products/n6.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
     rating: 5,
-    price: "$78",
+    price: "78",
   },
   {
-    id: 6,
+    id: 14,
     type: "others",
     imgSrc: "./img/products/n7.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
     rating: 5,
-    price: "$78",
+    price: "78",
   },
   {
-    id: 7,
+    id: 15,
     type: "others",
     imgSrc: "./img/products/n8.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
     rating: 5,
-    price: "$78",
+    price: "78",
   },
 ];

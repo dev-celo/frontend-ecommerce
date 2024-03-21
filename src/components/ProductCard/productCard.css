@@ -34,6 +34,7 @@
 #product1 .pro:hover {
   transform: scale(1.1); /* Aumenta a escala do card */
 }
+
 #product1 .pro img {
   width: 100%;
   border-radius: var(--border-radius);
@@ -70,8 +71,8 @@
 }
 
 #product1 .pro .cart {
-  width: 4.4rem;
-  height: 4.4rem;
+  width: 3rem;
+  height: 3rem;
   line-height: 4.4rem;
   border-radius: 4.4rem;
   background-color: #e8f6ea;
@@ -86,20 +87,4 @@
 
 #product1 .no-link-style {
   text-decoration: none;
-}
-
-/* Media query para telas médias */
-@media screen and (max-width: 1200px) {
-  #product1 .pro {
-    width: 30%;
-    min-width: 20rem;
-  }
-}
-
-/* Media query para telas pequenas */
-@media screen and (max-width: 768px) {
-  #product1 .pro {
-    width: 48%;
-    min-width: 100%;
-  }
 }

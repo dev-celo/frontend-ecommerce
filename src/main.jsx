@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faBars, faTimes, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 library.add(faBars, faTimes, faShoppingCart);
 
