@@ -3,7 +3,7 @@ name: Deploy on Merge
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
