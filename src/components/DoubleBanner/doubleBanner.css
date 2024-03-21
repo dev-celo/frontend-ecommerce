@@ -4,13 +4,13 @@
   flex-wrap: wrap;
 }
 
-#sm-banner .banner-box {
+#banner-box-1.banner-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   text-align: center;
-  background: url(/img/banner/b17.jpg);
+  background-image: url(/img/banner/b17.jpg);
   height: 38vh;
 
   background-size: cover;
@@ -19,10 +19,11 @@
   padding: 3rem;
 }
 
-#sm-banner .banner-box2 {
+#banner-box-2.banner-box {
   background-image: url(/img/banner/b10.jpg);
   margin-top: 1rem;
   width: 100%;
+  height: 38vh;
 }
 
 #sm-banner h4 {
