@@ -84,7 +84,7 @@ export const shirts = [
 
 export const others = [
   {
-    id: 8,
+    id: 0,
     type: "others",
     imgSrc: "./img/products/n1.jpg",
     brand: "adidas",
@@ -93,7 +93,7 @@ export const others = [
     price: "78",
   },
   {
-    id: 9,
+    id: 1,
     type: "others",
     imgSrc: "./img/products/n2.jpg",
     brand: "adidas",
@@ -102,7 +102,7 @@ export const others = [
     price: "78",
   },
   {
-    id: 10,
+    id: 2,
     type: "others",
     imgSrc: "./img/products/n3.jpg",
     brand: "adidas",
@@ -111,7 +111,7 @@ export const others = [
     price: "78",
   },
   {
-    id: 11,
+    id: 3,
     type: "others",
     imgSrc: "./img/products/n4.jpg",
     brand: "adidas",
@@ -120,7 +120,7 @@ export const others = [
     price: "78",
   },
   {
-    id: 12,
+    id: 4,
     type: "others",
     imgSrc: "./img/products/n5.jpg",
     brand: "adidas",
@@ -129,7 +129,7 @@ export const others = [
     price: "78",
   },
   {
-    id: 13,
+    id: 5,
     type: "others",
     imgSrc: "./img/products/n6.jpg",
     brand: "adidas",
@@ -138,7 +138,7 @@ export const others = [
     price: "78",
   },
   {
-    id: 14,
+    id: 6,
     type: "others",
     imgSrc: "./img/products/n7.jpg",
     brand: "adidas",
@@ -147,7 +147,7 @@ export const others = [
     price: "78",
   },
   {
-    id: 15,
+    id: 7,
     type: "others",
     imgSrc: "./img/products/n8.jpg",
     brand: "adidas",

@@ -32,24 +32,24 @@ export function ShoppingCartProvider({ children }) {
     function increaseCartQuantity(id, quantity, size) {
         setCartItems((currentItems) => {
             const existingItemIndex = currentItems.findIndex(
-                (item) => item.id === id
+                (item) => item.id === `${id}-${size}`
             );
-
+    
             if (existingItemIndex === -1) {
-                // Adiciona um novo item ao carrinho com o ID, quantidade e tamanho fornecidos
+                // Se o item não existe no carrinho, adiciona-o ao carrinho com a quantidade fornecida
                 return [...currentItems, { id: `${id}-${size}`, quantity, size }];
             } else {
-                // Se já houver um item com o mesmo ID e tamanho no carrinho
-                // Atualiza apenas a quantidade do item existente
+                // Se o item já existe no carrinho, atualiza apenas a quantidade do item existente
                 const updatedItems = [...currentItems];
                 updatedItems[existingItemIndex] = {
                     ...updatedItems[existingItemIndex],
-                    quantity: updatedItems[existingItemIndex].quantity + 1,
+                    quantity: updatedItems[existingItemIndex].quantity + quantity, // Incrementa a quantidade
                 };
                 return updatedItems;
             }
         });
     }
+    
 
     function decreaseCartQuantity(id) {
         setCartItems(currentItems => {
@@ -87,17 +87,21 @@ export function ShoppingCartProvider({ children }) {
         const productsArray = productType === 'shirts' ? shirts : (productType === 'others' ? others : []);
         // Encontra o item no array de produtos
         const selectedItem = productsArray.find(item => item.id === id);
-
+    
         if (selectedItem) {
-            const existingItemIndex = listCart.findIndex(item => item.id === selectedItem.id && item.size === selectedSize)
-            if (existingItemIndex === -1) {
-                setListCart((currentItems) => [...currentItems, { ...selectedItem, size: selectedSize, id: `${id}-${selectedSize}` }])
-            }
-            else {
-                const updatedItems = [...listCart]
-
-                updatedItems[existingItemIndex] = { ...updatedItems[existingItemIndex], size: selectedSize }
-                setListCart(updatedItems)
+            const existingItem = listCart.find(item => item.id === `${id}-${selectedSize}`);
+            
+            if (!existingItem) {
+                // Se o item não existe no carrinho, adiciona-o ao carrinho
+                setListCart(currentItems => [...currentItems, { ...selectedItem, size: selectedSize, id: `${id}-${selectedSize}`, quantity: 1 }]);
+            } else {
+                // Se o item já existe no carrinho, incrementa a quantidade desse item
+                setListCart(currentItems => currentItems.map(item => {
+                    if (item.id === `${id}-${selectedSize}`) {
+                        return { ...item, quantity: item.quantity + 1 }; // Incrementa a quantidade do item existente
+                    }
+                    return item; // Mantém os outros itens inalterados
+                }));
             }
         }
     }

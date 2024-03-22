@@ -32,7 +32,6 @@ function ProductDetail() {
         fetchData();
     }, [id, setSelectedProduct, typeProduct]);
 
-    console.log(selectedProduct);
     if (!selectedProduct) {
         return <p>Selecione um produto para ver os detalhes.</p>;
     }

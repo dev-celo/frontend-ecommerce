@@ -21,7 +21,6 @@ describe('Feature Component', () => {
 
     // Verifica se as imagens estão presentes com os atributos corretos
     const featureImages = screen.getAllByRole("img");
-    console.log("features: ", featureImages);
     expect(featureImages.length).toBe(features.length); // Verifica o número de imagens renderizadas
 
     featureImages.forEach((img, index) => {
