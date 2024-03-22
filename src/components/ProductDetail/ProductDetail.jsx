@@ -11,7 +11,7 @@ function ProductDetail() {
     const { id, typeProduct } = useParams();
     const [productQuantity, setProductQuantity] = useState(1);
     const [selectedProduct, setSelectedProduct] = useState({})
-    
+
     useEffect(() => {
         window.scrollTo(0, 0);
         const fetchData = async () => {
@@ -28,7 +28,7 @@ function ProductDetail() {
                 console.error('Error fetching product:', error);
             }
         };
-    
+
         fetchData();
     }, [id, setSelectedProduct, typeProduct]);
 
@@ -51,9 +51,20 @@ function ProductDetail() {
     return (
         <section id="prodetails" className="section-p1">
             <div className="single-pro-img">
-                <img src={finalImage} width="100%" id="MainImage" alt={selectedProduct.title} />
+                <img src={`/ecommerce/public/${finalImage}`} width="100%" id="MainImage" alt={selectedProduct.title} />
                 <div className="small-img-group">
-                    {/* Inserir imagens pequenas aqui */}
+                    <div className="small-img-col">
+                        <img src={`/ecommerce/public/${finalImage}`} width="100%" className="small-img" alt={selectedProduct.title} />
+                    </div>
+                    <div className="small-img-col">
+                        <img src={`/ecommerce/public/${finalImage}`} width="100%" className="small-img" alt={selectedProduct.title} />
+                    </div>
+                    <div className="small-img-col">
+                        <img src={`/ecommerce/public/${finalImage}`} width="100%" className="small-img" alt={selectedProduct.title} />
+                    </div>
+                    <div className="small-img-col">
+                        <img src={`/ecommerce/public/${finalImage}`} width="100%" className="small-img" alt={selectedProduct.title} />
+                    </div>
                 </div>
             </div>
 
@@ -70,7 +81,7 @@ function ProductDetail() {
                 </select>
                 <input
                     type="number"
-                    value={productQuantity} 
+                    value={productQuantity}
                     onChange={handleInputChange}
                 />
                 <button onClick={() => {
