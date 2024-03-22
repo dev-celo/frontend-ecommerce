@@ -35,7 +35,7 @@ function Header() {
             <NavItem link="/ecommerce/blog/" text="Blog" />
             <NavItem link="/ecommerce/about/" text="About" />
             <NavItem link="/ecommerce/contact/" text="Contact" />
-            <NavItem link="/ecommerce/" handleClick={openCart} text="Cart" />
+            <NavItem handleClick={openCart} text="Cart" hasItems={cartQuantity > 0} />
             <NavItem link="/ecommerce/login" text="Login" className="custom-button" />
           </Nav>
         </ul>
@@ -45,11 +45,12 @@ function Header() {
 }
 
 // Componente de item de menu
-function NavItem({ link, text, className, handleClick }) {
+function NavItem({ link, text, className, handleClick, hasItems }) {
   return (
     <Nav.Link to={link} as={NavLink}>
       <li>
         <a onClick={handleClick} className={className}>{text}</a>
+        {hasItems && <span className="cart-identifier"></span>}
       </li>
     </Nav.Link>
   );
