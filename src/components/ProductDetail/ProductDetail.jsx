@@ -1,48 +1,40 @@
 import PropTypes from 'prop-types';
 import './productDetail.css';
-import { useAppContext } from '../context/productsContext';
 import { useEffect, useState } from 'react';
-import Cookies from 'js-cookie';
 import { useParams } from 'react-router-dom';
 import { shirts, others } from '../data/productsData';
 import { useShoppingCart } from '../context/shoppingCartContext';
 import formatCurrency from '../../utilities/formatCurrency';
 
-// eslint-disable-next-line react-hooks/exhaustive-deps
-const productTypes = {
-    shirts,
-    others
-};
 function ProductDetail() {
     const { increaseCartQuantity, listShoppingCart, selectedSize, setSizeProduct } = useShoppingCart();
-    const { selectedProduct, setSelectedProduct } = useAppContext();
     const { id, typeProduct } = useParams();
     const [productQuantity, setProductQuantity] = useState(1);
-    
+    const [selectedProduct, setSelectedProduct] = useState({})
+
     useEffect(() => {
-        const storedSelectedProduct = Cookies.get('SelectedProduct');
-
-        window.scrollTo(0, 0); // Isso rolará a página para o topo quando o componente for montado
-
-        if (productTypes[typeProduct]) {
-            const product = productTypes[typeProduct][id];
-            if (product) {
-                setSelectedProduct(existingProduct => (
-                    existingProduct && existingProduct.id === product.id ? existingProduct : product
-                ));
-
-                if (storedSelectedProduct && product.id === JSON.parse(storedSelectedProduct).id) {
-                    return setSelectedProduct(JSON.parse(storedSelectedProduct));
+        window.scrollTo(0, 0);
+        const fetchData = async () => {
+            try {
+                let productsData;
+                if (typeProduct === 'shirts') {
+                    productsData = shirts;
+                } else if (typeProduct === 'others') {
+                    productsData = others;
                 }
+                const product = productsData.find(product => product.id === parseInt(id));
+                setSelectedProduct(product);
+            } catch (error) {
+                console.error('Error fetching product:', error);
             }
-        }
+        };
+
+        fetchData();
     }, [id, setSelectedProduct, typeProduct]);
 
     if (!selectedProduct) {
         return <p>Selecione um produto para ver os detalhes.</p>;
     }
-
-    const imgSrcFromCookie = selectedProduct.imgSrc.replace('.', '') || (Cookies.getJSON('SelectedProduct') && JSON.parse(Cookies.get('SelectedProduct')).imgSrc).replace('.', '');
 
     const handleInputChange = (event) => {
         const valor = parseInt(event.target.value);
@@ -53,25 +45,24 @@ function ProductDetail() {
         setSizeProduct(event.target.value);
     };
 
+    const finalImage = selectedProduct.imgSrc;
+
     return (
         <section id="prodetails" className="section-p1">
             <div className="single-pro-img">
-                <img src={`/${imgSrcFromCookie}`} width="100%" id="MainImage" alt={selectedProduct.title} />
+                <img src={`/ecommerce/public/${finalImage}`} width="100%" id="MainImage" alt={selectedProduct.title} />
                 <div className="small-img-group">
                     <div className="small-img-col">
-                        <img src={`/${imgSrcFromCookie}`} width="100%" className="small-img" alt={ selectedProduct.title } />
+                        <img src={`/ecommerce/public/${finalImage}`} width="100%" className="small-img" alt={selectedProduct.title} />
                     </div>
-
                     <div className="small-img-col">
-                        <img src={`/${imgSrcFromCookie}`} width="100%" className="small-img" alt={ selectedProduct.title } />
+                        <img src={`/ecommerce/public/${finalImage}`} width="100%" className="small-img" alt={selectedProduct.title} />
                     </div>
-
                     <div className="small-img-col">
-                        <img src={`/${imgSrcFromCookie}`} width="100%" className="small-img" alt={ selectedProduct.title } />
+                        <img src={`/ecommerce/public/${finalImage}`} width="100%" className="small-img" alt={selectedProduct.title} />
                     </div>
-
                     <div className="small-img-col">
-                        <img src={`/${imgSrcFromCookie}`} width="100%" className="small-img" alt={ selectedProduct.title } />
+                        <img src={`/ecommerce/public/${finalImage}`} width="100%" className="small-img" alt={selectedProduct.title} />
                     </div>
                 </div>
             </div>
@@ -89,7 +80,7 @@ function ProductDetail() {
                 </select>
                 <input
                     type="number"
-                    value={productQuantity} 
+                    value={productQuantity}
                     onChange={handleInputChange}
                 />
                 <button onClick={() => {
@@ -116,4 +107,4 @@ ProductDetail.propTypes = {
     }),
 };
 
-export default ProductDetail
+export default ProductDetail;
