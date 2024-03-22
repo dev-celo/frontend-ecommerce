@@ -19,7 +19,7 @@ export function ShoppingCartProvider({ children }) {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [selectedSize, setSelectedSize] = useState("");
 
-
+    
     const setSizeProduct = (newSize) => {
         setSelectedSize(newSize)
     }

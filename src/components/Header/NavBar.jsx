@@ -6,6 +6,10 @@ import './nav.css';
 function NavBar({ isOpen }) {
     const { closeBar } = useShoppingCart();
 
+    const handleLinkClick = () => {
+        closeBar();
+    };
+
     return (
         <section id="navbar-component" data-testid="navbar-component">
             <Offcanvas show={isOpen} onHide={closeBar} placement="start" data-testid="close-button" >
@@ -16,8 +20,8 @@ function NavBar({ isOpen }) {
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                     <Nav className="flex-column">
-                        <Nav.Link to="/ecommerce/login/" as={NavLink} className="nav-link login active">Login</Nav.Link>
-                        <Nav.Link to="/ecommerce/" as={NavLink} className="nav-link">Home</Nav.Link>
+                        <Nav.Link to="/ecommerce/login/" as={NavLink} className="nav-link login active" onClick={handleLinkClick}>Login</Nav.Link>
+                        <Nav.Link to="/ecommerce/" as={NavLink} className="nav-link" onClick={handleLinkClick}>Home</Nav.Link>
                         <Nav.Link to="/ecommerce/shop/" as={NavLink} className="nav-link">Shop</Nav.Link>
                         <Nav.Link to="/ecommerce/blog/" as={NavLink} className="nav-link">Blog</Nav.Link>
                         <Nav.Link to="/ecommerce/about/" as={NavLink} className="nav-link">About</Nav.Link>
