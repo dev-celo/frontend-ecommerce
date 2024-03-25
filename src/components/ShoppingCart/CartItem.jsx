@@ -21,7 +21,7 @@ function CartItem({ id, imgSrc, title, quantity, price, size }) {
         <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
             <img
                 key={id}
-                src={`/ecommerce/public/${imgSrc?.replace('.', '')}`}
+                src={`/ecommerce${imgSrc?.replace('.', '')}`}
                 alt={title}
                 style={{
                     minWidth: "125px",
