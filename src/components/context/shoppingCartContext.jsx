@@ -32,24 +32,24 @@ export function ShoppingCartProvider({ children }) {
     function increaseCartQuantity(id, quantity, size) {
         setCartItems((currentItems) => {
             const existingItemIndex = currentItems.findIndex(
-                (item) => item.id === `${id}-${size}`
+                (item) => item.id === id
             );
-    
+
             if (existingItemIndex === -1) {
-                // Se o item não existe no carrinho, adiciona-o ao carrinho com a quantidade fornecida
+                // Adiciona um novo item ao carrinho com o ID, quantidade e tamanho fornecidos
                 return [...currentItems, { id: `${id}-${size}`, quantity, size }];
             } else {
-                // Se o item já existe no carrinho, atualiza apenas a quantidade do item existente
+                // Se já houver um item com o mesmo ID e tamanho no carrinho
+                // Atualiza apenas a quantidade do item existente
                 const updatedItems = [...currentItems];
                 updatedItems[existingItemIndex] = {
                     ...updatedItems[existingItemIndex],
-                    quantity: updatedItems[existingItemIndex].quantity + quantity, // Incrementa a quantidade
+                    quantity: updatedItems[existingItemIndex].quantity + 1,
                 };
                 return updatedItems;
             }
         });
     }
-    
 
     function decreaseCartQuantity(id) {
         setCartItems(currentItems => {
