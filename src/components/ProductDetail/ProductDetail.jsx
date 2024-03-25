@@ -50,19 +50,19 @@ function ProductDetail() {
     return (
         <section id="prodetails" className="section-p1">
             <div className="single-pro-img">
-                <img src={`/ecommerce/public/${finalImage?.replace("./", '')}`} width="100%" id="MainImage" alt={selectedProduct.title} />
+                <img src={`/ecommerce/${finalImage?.replace("./", '')}`} width="100%" id="MainImage" alt={selectedProduct.title} />
                 <div className="small-img-group">
                     <div className="small-img-col">
-                        <img src={`/ecommerce/public/${finalImage?.replace("./", '')}`} width="100%" className="small-img" alt={selectedProduct.title} />
+                        <img src={`/ecommerce/${finalImage?.replace("./", '')}`} width="100%" className="small-img" alt={selectedProduct.title} />
                     </div>
                     <div className="small-img-col">
-                        <img src={`/ecommerce/public/${finalImage?.replace("./", '')}`} width="100%" className="small-img" alt={selectedProduct.title} />
+                        <img src={`/ecommerce/${finalImage?.replace("./", '')}`} width="100%" className="small-img" alt={selectedProduct.title} />
                     </div>
                     <div className="small-img-col">
-                        <img src={`/ecommerce/public/${finalImage?.replace("./", '')}`} width="100%" className="small-img" alt={selectedProduct.title} />
+                        <img src={`/ecommerce/${finalImage?.replace("./", '')}`} width="100%" className="small-img" alt={selectedProduct.title} />
                     </div>
                     <div className="small-img-col">
-                        <img src={`/ecommerce/public/${finalImage?.replace("./", '')}`} width="100%" className="small-img" alt={selectedProduct.title} />
+                        <img src={`/ecommerce/${finalImage?.replace("./", '')}`} width="100%" className="small-img" alt={selectedProduct.title} />
                     </div>
                 </div>
             </div>
