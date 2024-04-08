@@ -3,9 +3,13 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import './register.css';
 import InputMask from 'react-input-mask';
+import { useState } from "react";
+import SuccessScreen from "./SuccessScreen";
 
 
 function Register() {
+    const [success, setSuccess] = useState(false);
+
     // Validação de formulário
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -35,58 +39,89 @@ function Register() {
         resolver: yupResolver(schema),
     })
 
-    const onSubmit = (data) => data;
-
+    const onSubmit = (data) => {
+        if (data) {
+            setSuccess(true);
+        }
+        else {
+            setSuccess(false);
+        }
+    }
     return (
-        <div className="container register">
-            <div className="login-container form-container">
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <div id="name" className="d-flex text-center center">
-                        <input type="text" name="name" id="nome" placeholder="Nome" {...register("name")} />
-                        <p>{errors.name?.message}</p>
-                        <input type="text" name="lastName" id="lastName" placeholder="Sobrenome" {...register("lastName")} />
-                        <p>{errors.lastName?.message}</p>
+        <>
+            {
+                success ? (
+                    <div className="container-success">
+                        <SuccessScreen onContinue={'/ecommerce/login'} />
                     </div>
-                    <div id="addres" className="d-flex text-center center">
-                        <input type="text" name="street" placeholder="Rua" {...register("street")} />
-                        <p>{errors.street?.message}</p>
-                        <input type="text" name="number" placeholder="Número" {...register("number")} />
-                        <p>{errors.number?.message}</p>
-                        <input type="text" name="complement" placeholder="Complemento" {...register("complement")} />
-                        <p>{errors.complement?.message}</p>
-                        <input type="text" name="neighborhood" placeholder="Bairro" {...register("neighborhood")} />
-                        <p>{errors.neighborhood?.message}</p>
-                        <input type="text" name="city" placeholder="Cidade" {...register("city")} />
-                        <p>{errors.city?.message}</p>
-                        <input type="text" name="state" placeholder="Estado" {...register("state")} />
-                        <p>{errors.state?.message}</p>
-                        <input type="text" name="zipCode" placeholder="CEP" {...register("zipCode")} />
-                        <p>{errors.zipCode?.message}</p>
-                    </div>
-                    <div id="contact" className="d-flex text-center center">
-                        <InputMask
-                            mask="(99) 99999-9999"
-                            maskChar={null}
-                            type="tel"
-                            name="telephone"
-                            id="telephone"
-                            placeholder="(99) 99999-9999"
-                            {...register("telephone")}
-                        />
-                        <p>{errors.telephone?.message}</p>
-                    </div>
-                    <div id="infos-user" className="d-flex text-center center">
-                        <input type="email" name="email" placeholder="E-mail" {...register("email")} />
-                        <p>{errors.email?.message}</p>
-                        <input type="password" name="password" id="password" placeholder="Digite sua senha" {...register("password")} />
-                        <p>{errors.password?.message}</p>
-                        <input type="password" name="passwordConfirmation" id="password-confirmation" placeholder="Confirme sua senha" {...register("passwordConfirmation")} />
-                        <p>{errors.passwordConfirmation?.message}</p>
-                    </div>
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </div >
+                ) :
+                    (
+                        <div className="register-container register">
+                            <div className="register-login-container form-container">
+                                <form onSubmit={handleSubmit(onSubmit)}>
+                                    <div id="name" className="d-flex text-center center gap-1">
+                                        <input type="text" name="name" id="nome" placeholder="Nome" {...register("name")} />
+                                        <p className="error">{errors.name?.message}</p>
+                                        <input type="text" name="lastName" id="lastName" placeholder="Sobrenome" {...register("lastName")} />
+                                        <p className="error">{errors.lastName?.message}</p>
+                                    </div >
+                                    <div className="d-flex text-center center gap-2">
+                                        <div id="addres" className="d-flex text-center center flex-column w-50">
+                                            <input type="text" name="street" placeholder="Rua" {...register("street")} />
+                                            <p className="error">{errors.street?.message}</p>
+                                            <input type="text" name="number" placeholder="Número" {...register("number")} />
+                                            <p className="error">{errors.number?.message}</p>
+                                            <input type="text" name="complement" placeholder="Complemento" {...register("complement")} />
+                                            <p className="error">{errors.complement?.message}</p>
+                                        </div>
+                                        <div className="d-flex text-center center flex-column w-50">
+                                            <input type="text" name="neighborhood" placeholder="Bairro" {...register("neighborhood")} />
+                                            <p className="error">{errors.neighborhood?.message}</p>
+                                            <input type="text" name="city" placeholder="Cidade" {...register("city")} />
+                                            <p className="error">{errors.city?.message}</p>
+                                            <input type="text" name="state" placeholder="Estado" {...register("state")} />
+                                            <p className="error">{errors.state?.message}</p>
+                                        </div>
+                                    </div>
+                                    <div id="contact" className="d-flex text-center center gap-2">
+                                        <section className="text-center center w-50">
+                                            <input type="text" name="zipCode" placeholder="CEP" {...register("zipCode")} />
+                                            <p className="error">{errors.zipCode?.message}</p>
+                                        </section>
+                                        <section className="text-center center w-50">
+                                            <InputMask
+                                                mask="(99) 99999-9999"
+                                                maskChar={null}
+                                                type="tel"
+                                                name="telephone"
+                                                id="telephone"
+                                                placeholder="(99) 99999-9999"
+                                                {...register("telephone")}
+                                            />
+                                            <p className="error">{errors.telephone?.message}</p>
+                                        </section>
+                                    </div>
+                                    <div id="infos-user" className="text-center center">
+                                        <input type="email" name="email" placeholder="E-mail" {...register("email")} />
+                                        <p className="error">{errors.email?.message}</p>
+                                    </div>
+                                    <div className="d-flex text-center center gap-1">
+                                        <div className="d-flex text-center center flex-column w-50">
+                                            <input type="password" name="password" id="password" placeholder="Digite sua senha" {...register("password")} />
+                                            <p className="error">{errors.password?.message}</p>
+                                        </div>
+                                        <div className="d-flex text-center center flex-column w-50">
+                                            <input type="password" name="passwordConfirmation" id="password-confirmation" placeholder="Confirme sua senha" {...register("passwordConfirmation")} />
+                                            <p className="error">{errors.passwordConfirmation?.message}</p>
+                                        </div>
+                                    </div>
+                                    <button type="submit">Enviar</button>
+                                </form >
+                            </div >
+                        </div >
+                    )
+            }
+        </>
     );
 }
 
