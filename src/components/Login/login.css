@@ -44,7 +44,7 @@ h1 {
 
 .login-container {
     position: relative;
-    width: 80%;
+    width: 50%;
 }
 .form-container {
     border: 1px solid hsla(0, 0%, 65%, 0.158);
@@ -133,9 +133,9 @@ h1 {
 
 .illustration {
     position: absolute;
-    top: -14%;
-    right: -2px;
-    width: 90%;
+    top: -20%;
+    right: 0px;
+    width: 60%;
 }
 
 .circle-one {
@@ -223,8 +223,13 @@ img {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .login-container {
         width: 90%; /* Reduza a largura do container de login em telas menores */
+    }
+
+    .register-forget {
+        flex-direction: column;
+        gap: .5rem;
     }
 }
