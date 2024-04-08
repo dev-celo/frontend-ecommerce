@@ -1,0 +1,36 @@
+
+.success-screen.content {
+  display: flex;
+  background-color: #f8f9fa;
+  max-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50%;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.message {
+  text-align: center;
+}
+
+.illustration-img {
+  margin-top: 30rem;
+  max-width: 35rem;
+}
+
+.footer {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
