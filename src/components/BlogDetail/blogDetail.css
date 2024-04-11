@@ -1,0 +1,43 @@
+.blog-details-container {
+    margin-top: 27rem;
+    margin-bottom: 27rem;
+}
+.card-body {
+    position: relative; /* Posicionamento relativo para os filhos */
+}
+
+.card-title {
+    position: relative; /* Posicionamento relativo para aplicar z-index */
+    z-index: 100; /* Garante que o título esteja acima dos outros elementos dentro do Card.Body */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.carousel-size {
+    position: relative; /* Posicionamento relativo para aplicar z-index */
+    z-index: 1; /* Garante que o carrossel não sobreponha o título */
+}
+
+.card-img.first-image {
+    width: 100%;
+    margin: auto;
+}
+
+@media (min-width: 770px) and (max-width: 990px) {
+    .blog-details-container {
+        margin-top: 40rem;
+        margin-bottom: 40rem;
+    }
+
+    .sidebar {
+        /* Estilos específicos para a faixa de 770px a 990px */
+        background-color: #f0f0f0;
+        padding: 20px;
+    }
+
+    .sidebar .card {
+        /* Estilos para o card dentro da sidebar */
+        border: 1px solid #ccc;
+    }
+}

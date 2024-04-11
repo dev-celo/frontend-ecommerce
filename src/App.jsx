@@ -5,15 +5,20 @@ import DetailsProduct from './pages/DetailsProduct/DetailsProduct';
 import './app.css';
 import PageLogin from './pages/Login/PageLogin';
 import PageRegister from './pages/PageRegister/PageRegister';
+import BlogPage from './pages/Blog/Blog';
+import BlogDetail from './pages/BlogDetails/BlogDetails';
 
 function App() {
   return (
     <ShoppingCartProvider>
       <Routes>
         <Route path="/ecommerce" Component={Home} />
+        <Route path="/ecommerce/blog" Component={BlogPage} />
         <Route path="/ecommerce/login" Component={PageLogin} />
         <Route path="/ecommerce/register" Component={PageRegister} />
         <Route path="/ecommerce/product/:typeProduct/:id" Component={DetailsProduct} />
+        <Route path="/ecommerce/blog/:id" Component={BlogDetail} />
+
       </Routes>
     </ShoppingCartProvider>
   )
