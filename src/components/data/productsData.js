@@ -3,7 +3,7 @@ export const shirts = [
   {
     id: 0,
     type: "shirts",
-    imgSrc: "./img/products/f1.jpg",
+    imgSrc: "/ecommerce/img/products/f1.jpg",
     brand: "Adidas",
     title: "Cartoon Astronaut T-shirts",
     rating: 5,
@@ -13,7 +13,7 @@ export const shirts = [
   {
     id: 1,
     type: "shirts",
-    imgSrc: "./img/products/f2.jpg",
+    imgSrc: "/ecommerce/img/products/f2.jpg",
     brand: "Nike",
     title: "Graphic Print Hoodie",
     rating: 4,
@@ -23,7 +23,7 @@ export const shirts = [
   {
     id: 2,
     type: "shirts",
-    imgSrc: "./img/products/f3.jpg",
+    imgSrc: "/ecommerce/img/products/f3.jpg",
     brand: "Puma",
     title: "Sporty Jogger Pants",
     rating: 4,
@@ -33,7 +33,7 @@ export const shirts = [
   {
     id: 3,
     type: "shirts",
-    imgSrc: "./img/products/f4.jpg",
+    imgSrc: "/ecommerce/img/products/f4.jpg",
     brand: "Adidas",
     title: "Running Shoes",
     rating: 5,
@@ -43,7 +43,7 @@ export const shirts = [
   {
     id: 4,
     type: "shirts",
-    imgSrc: "./img/products/f5.jpg",
+    imgSrc: "/ecommerce/img/products/f5.jpg",
     brand: "Nike",
     title: "Casual Sneakers",
     rating: 4,
@@ -53,7 +53,7 @@ export const shirts = [
   {
     id: 5,
     type: "shirts",
-    imgSrc: "./img/products/f6.jpg",
+    imgSrc: "/ecommerce/img/products/f6.jpg",
     brand: "Puma",
     title: "Classic Baseball Cap",
     rating: 5,
@@ -63,7 +63,7 @@ export const shirts = [
   {
     id: 6,
     type: "shirts",
-    imgSrc: "./img/products/f7.jpg",
+    imgSrc: "/ecommerce/img/products/f7.jpg",
     brand: "Adidas",
     title: "Gym Duffle Bag",
     rating: 4,
@@ -73,7 +73,7 @@ export const shirts = [
   {
     id: 7,
     type: "shirts",
-    imgSrc: "./img/products/f8.jpg",
+    imgSrc: "/ecommerce/img/products/f8.jpg",
     brand: "Nike",
     title: "Tech-Fit Compression Leggings",
     rating: 5,
@@ -86,7 +86,7 @@ export const others = [
   {
     id: 0,
     type: "others",
-    imgSrc: "./img/products/n1.jpg",
+    imgSrc: "/ecommerce/img/products/n1.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
     rating: 5,
@@ -95,7 +95,7 @@ export const others = [
   {
     id: 1,
     type: "others",
-    imgSrc: "./img/products/n2.jpg",
+    imgSrc: "/ecommerce/img/products/n2.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
     rating: 5,
@@ -104,7 +104,7 @@ export const others = [
   {
     id: 2,
     type: "others",
-    imgSrc: "./img/products/n3.jpg",
+    imgSrc: "/ecommerce/img/products/n3.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
     rating: 5,
@@ -113,7 +113,7 @@ export const others = [
   {
     id: 3,
     type: "others",
-    imgSrc: "./img/products/n4.jpg",
+    imgSrc: "/ecommerce/img/products/n4.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
     rating: 5,
@@ -122,7 +122,7 @@ export const others = [
   {
     id: 4,
     type: "others",
-    imgSrc: "./img/products/n5.jpg",
+    imgSrc: "/ecommerce/img/products/n5.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
     rating: 5,
@@ -131,7 +131,7 @@ export const others = [
   {
     id: 5,
     type: "others",
-    imgSrc: "./img/products/n6.jpg",
+    imgSrc: "/ecommerce/img/products/n6.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
     rating: 5,
@@ -140,7 +140,7 @@ export const others = [
   {
     id: 6,
     type: "others",
-    imgSrc: "./img/products/n7.jpg",
+    imgSrc: "/ecommerce/img/products/n7.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
     rating: 5,
@@ -149,7 +149,7 @@ export const others = [
   {
     id: 7,
     type: "others",
-    imgSrc: "./img/products/n8.jpg",
+    imgSrc: "/ecommerce/img/products/n8.jpg",
     brand: "adidas",
     title: "Cartoon Astronaut T-shirts",
     rating: 5,
