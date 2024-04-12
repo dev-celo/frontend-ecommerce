@@ -24,10 +24,10 @@
     margin: auto;
 }
 
-@media (min-width: 380px) and (max-width: 820px) {
+@media (min-width: 360px) and (max-width: 820px) {
     .blog-details-container {
-        margin-top: 20rem;
-        margin-bottom: 20rem;
+        margin-top: 23rem;
+        margin-bottom: 23rem;
     }
 
     .sidebar {
