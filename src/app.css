@@ -98,6 +98,18 @@ button.white {
   transition: 200ms;
 }
 
+button.black {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 1.1rem 1.8rem;
+  color: black;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid black;
+  outline: none;
+  transition: 200ms;
+}
+
 body {
   width: 100%;
 }

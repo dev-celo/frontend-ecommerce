@@ -10,9 +10,9 @@ export function DoubleBanner() {
         <button className="white" data-testid="banner-button-1">Learn More</button>
       </div>
       <div className="banner-box banner-box2" data-testid="banner-box-2" id="banner-box-2">
-        <h4 data-testid="banner-title-2">spring/summer</h4>
-        <h2 data-testid="banner-subtitle-2">Upcomming season</h2>
-        <span data-testid="banner-description-2">The best classNameic dress in on sale at cara</span>
+        <h4 data-testid="banner-title-2" className="background-text">spring/summer</h4>
+        <h2 data-testid="banner-subtitle-2" className="background-text">Upcomming season</h2>
+        <p className="background-text" data-testid="banner-description-2">The best dress in on sale at cara</p>
         <button className="white" data-testid="banner-button-2">Collection</button>
       </div>
     </section>
