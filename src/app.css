@@ -9,7 +9,7 @@
   --color-paragraphy: hsl(calc(160 - var(--hue)), 15%, 32%);
 
   --background-navbar-color: hsl(calc(235 - var(--hue)), 45%, 92%);
-  --color-font-navbar: hsl(0, 0%, 10%);
+  --color-font-navbar: hsl(0, 17%, 95%);
 
   --color-font-navbar-hover: hsl(calc(182 - var(--hue)), 88%, 27%);
 
