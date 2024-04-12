@@ -24,10 +24,10 @@
     margin: auto;
 }
 
-@media (min-width: 770px) and (max-width: 990px) {
+@media (min-width: 380px) and (max-width: 820px) {
     .blog-details-container {
-        margin-top: 40rem;
-        margin-bottom: 40rem;
+        margin-top: 20rem;
+        margin-bottom: 20rem;
     }
 
     .sidebar {
@@ -39,5 +39,12 @@
     .sidebar .card {
         /* Estilos para o card dentro da sidebar */
         border: 1px solid #ccc;
+    }
+}
+
+@media (min-width: 860px) and (max-width: 1100px) {
+    .blog-details-container {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 }
