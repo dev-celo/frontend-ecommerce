@@ -19,6 +19,8 @@ function App() {
         <Route path="/ecommerce/register" Component={PageRegister} />
         <Route path="/ecommerce/shop" Component={Shopping} />
         <Route path="/ecommerce/product/:typeProduct/:id" Component={DetailsProduct} />
+        <Route path="/ecommerce/shop/product/:typeProduct/:id" Component={DetailsProduct} />
+
         <Route path="/ecommerce/blog/:id" Component={BlogDetail} />
 
       </Routes>
