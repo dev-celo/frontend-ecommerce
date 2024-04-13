@@ -8,6 +8,7 @@ import PageRegister from './pages/PageRegister/PageRegister';
 import BlogPage from './pages/Blog/Blog';
 import BlogDetail from './pages/BlogDetails/BlogDetails';
 import Shopping from './pages/Shop/Shop';
+import AboutPage from './pages/About/About';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/ecommerce/login" Component={PageLogin} />
         <Route path="/ecommerce/register" Component={PageRegister} />
         <Route path="/ecommerce/shop" Component={Shopping} />
+        <Route path="/ecommerce/about" Component={AboutPage} />
         <Route path="/ecommerce/product/:typeProduct/:id" Component={DetailsProduct} />
         <Route path="/ecommerce/shop/product/:typeProduct/:id" Component={DetailsProduct} />
 
