@@ -19,9 +19,9 @@ function Header() {
             <img id="logo" src={logo} className="logo" alt="Cura logo da página" />
           </Nav.Link>
         </Nav>
-        <Button id="cart" data-testid="shopping-cart" style={{ width: "4rem", height: "4rem" }} variant="outline-light" className="cart" onClick={openCart}>
+        <Button id="cart-button" data-testid="shopping-cart" style={{ width: "4rem", height: "4rem" }} variant="outline-light" className="cart" onClick={openCart}>
           <FontAwesomeIcon id="cart" data-testid="shopping-cart" icon="shopping-cart" />
-          <div className="rounded-circle bg-danger d-flex justify-content-center align-items-center" style={{ color: "white", width: "1.5rem", height: "1.5rem", position: "absolute", bottom: 15, right: 30, transform: "translate(25%, 25%)", fontSize: "1.1rem" }}>
+          <div className="rounded-circle bg-danger d-flex justify-content-center align-items-center" style={{ color: "white", width: "1.5rem", height: "1.5rem", position: "absolute", bottom: 50, right: 30, transform: "translate(25%, 25%)", fontSize: "1.1rem" }}>
             {cartQuantity}
           </div>
         </Button>

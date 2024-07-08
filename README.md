@@ -1,111 +1,159 @@
-<div align = "center">
-    </br>
-    <img src="img/logo.png" alt="Logo do repositório ecommerce"></img>
-    </br>
-    <p>ecommerce, Compras realizadas em qualquer aparelho!</p>
-    </br>
-    <img src="https://img.shields.io/static/v1?label=Tech2 etc&message=Compras online&color=7159c1&style=for-the-badge&logo=blue"/>
-    </br>
-    </br>
-    <img src="assets-read-me/cara.png" width="100%" alt="Foto página inicial do site cara"></img>
-    </br>
-    </br>
-</div>
+### Documentação do Projeto Frontend do E-commerce
 
-# Cara:
+Este documento serve como guia para o desenvolvimento e manutenção do frontend do projeto de e-commerce que vende sementes de cannabis.
 
-<!--ts-->
+---
 
-- [Sobre](#sobre)
-- [Navegar no website](#navegar)
-- [Como usar](#navegar)
-  - [Demonstração da aplicação](https://dev-celo.github.io/ecommerce/)
-  - [Remote files](https://github.com/dev-celo/ecommerce)
-- [Tecnologias](#tecnologias)
-<!--te-->
+#### Sumário
+1. [Estrutura do Projeto](#estrutura-do-projeto)
+2. [Dependências](#dependências)
+3. [Configuração do Ambiente](#configuração-do-ambiente)
+4. [Scripts Disponíveis](#scripts-disponíveis)
+5. [Componentes](#componentes)
+6. [Estado Global](#estado-global)
+7. [Roteamento](#roteamento)
+8. [Contribuição](#contribuição)
 
-# Sobre:
+---
 
-<div id="sobre">
-    <p>
-     Cara é um ecommerce completo em vanilla Javascript, onde um dos principais desafios foi o curso completo em inglês no youtube do Tech2 etc.
-     Site totalmente responsivo usando media query, se adapta aos principais tipos de telas.
-    </p>
-    </br>
-    <p>
-    Trabalho realizado com o pessoal do tech2 etc onde criamos uma página de vendas on-line, com técnicas avanadas de CSS.
-    </p>
-</div>
+### Estrutura do Projeto
 
-# Navegar no site:
+A estrutura do diretório do frontend é a seguinte:
 
-<div id="navegar">
-    <h2>Como navegar em nossa aplicação?</h2>
-    <p>
-    Você pode navegar entre os itens da nossa página clicando nos seguintes links (que se encontra na parte superior do site):
-    </p>
-    <img src="assets-read-me/navegacao-cara.png"  width="500px" alt="Itens de navegação Inicio, Serviços, Sobre"></img>
-    </br>
-    <p>
-    Se estiver utilizando uma tela menor, provavelmente você terá que abrir o menu(també na parte superior), que estará do lado da bolsa:
-    <p>
-    <img src="assets-read-me/top-mobile-cara.png" width="500px" alt="Icone de abertura do menu de navegação"></img>
-    </br>
-    <p>E logo em seguida terá o seguinte resultado(aba lateral com o menu de navegação):</p>
-    <img src="assets-read-me/aba-lateral-menu-nav.png"  width="500px" alt="Aparência do menu de navegação"></img>
-    </br>
-    <p>Caso você clique na bolsa, será direcionado para o carrinho de compras.</p>
-    <img src="assets-read-me/top-mobile-cara.png" width="500px" alt="Icone de abertura do carrinho de compra"></img>
-    </br>
-    <img src="assets-read-me/carrinho-compra.png" width="500px" alt="Imagem do carrinho de compras"></img>
-    </br>
-    <p>Você poderá efetuar futuramente as compras a partir dos seguintes cards: </p>
-    <img src="assets-read-me/card-compras.png"  width="500px" alt="Botão agende sua consulta"></img>
-</div>
+```
+ecommerce-frontend/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── about/
+│   │   ├── bannerDiscount/
+│   │   ├── blog/
+│   │   ├── blogDetails/
+│   │   ├── buttons/
+│   │   ├── doubleBanner/
+│   │   ├── feature/
+│   │   ├── footer/
+│   │   ├── header/
+│   │   ├── hero/
+│   │   ├── productCard/
+│   │   ├── productDetail/
+│   │   ├── shoppingCart/
+│   │   ├── smallBanners/
+│   ├── context/
+│   ├── data/
+│   ├── hooks/
+│   ├── pages/
+│   │   ├── Login/
+│   │   ├── Register/
+│   ├── App.js
+│   ├── index.js
+├── package.json
+├── .gitignore
+└── README.md
+```
 
-<div align="center">
-  </br>
-  </br>
-  </br>
-  =========================================================
-  <h2>✅ Javascript Select 🚀 Projeto concluído...  ✅</h2>
-  <p>✅ Todas as aulas completas!</p>
-  </br>
-  </br>
-</div>
+### Dependências
 
-<div id="tecnologias">
+As principais dependências do projeto incluem:
 
-### Trabalho realizado com
+- React
+- React Router DOM
+- Context API para gerenciamento de estado
 
-- [x] HTML5
-- [x] CSS3
-- [x] Javascript
-      </br>
+### Configuração do Ambiente
 
-Um dos projetos mais desafiadores para mim. Primeiro porque quando comecei a desenvolver na linguagem C eu sempre me perguntava:
+Siga as etapas abaixo para configurar o ambiente de desenvolvimento:
 
-- Como vou fazer algo real? Nessa tela preta não consigo fazer nada.
-- Quero um dia conseguir fazer um ecommerce... Será que vou conseguir?
+1. **Clonar o Repositório:**
+   ```sh
+   git clone https://github.com/SEU_USUARIO/ecommerce-frontend.git
+   cd ecommerce-frontend
+   ```
 
-E agora estou com o front - end de um ecommerce concluido.
-Agora o projeto só está no inicio, já que agora quero aprender como desenvolver o back - end dessa aplicação.
+2. **Instalar Dependências:**
+   ```sh
+   npm install
+   ```
 
-## Estudado
-- Ecommerce Responsivo usando HTML CSS & JavaScript.
-- Completo para iniciantes.
-- Página web multi-page responsiva.
-- Aprendemos como montar uma página profissional.
-- Fundamentos de web design.
-- CSS Moderno, flexbox e CSS Grid.
-- Como usar componentes e layout patterns para um website profissional.
-- Design avançado e responsivo com o uso de media queries.
-</div>
+3. **Iniciar o Servidor de Desenvolvimento:**
+   ```sh
+   npm start
+   ```
 
-<div align = "center" style="border-top: 1px solid grey; padding-top: 20px;">
-#### Olá me chamo Marcelo, fique à vontade para opinar :)
+### Scripts Disponíveis
 
-  <p>Se você chegou até aqui, muito obrigado por visitar esse perfil! Espero que tenha gostaddo do conteúdo.</p>
-  
-  Você pode acessar a página [Clicando aqui](https://dev-celo.github.io/ecommerce/)
-</div>
+No diretório do projeto, você pode executar:
+
+- `npm start`: Inicia o servidor de desenvolvimento.
+- `npm build`: Cria a aplicação para produção na pasta `build`.
+
+### Componentes
+
+Os componentes estão localizados na pasta `src/components`. Aqui estão os principais componentes e suas responsabilidades:
+
+- **about**: Componente que exibe informações sobre a empresa.
+- **bannerDiscount**: Componente para exibir banners de desconto.
+- **blog**: Componente para listar artigos do blog.
+- **blogDetails**: Componente para exibir detalhes de um artigo do blog.
+- **buttons**: Componentes reutilizáveis de botões.
+- **doubleBanner**: Componente para exibir banners duplos.
+- **feature**: Componente para exibir características do produto.
+- **footer**: Componente do rodapé.
+- **header**: Componente do cabeçalho.
+- **hero**: Componente para exibição principal.
+- **productCard**: Componente de cartão de produto.
+- **productDetail**: Componente de detalhes do produto.
+- **shoppingCart**: Componente do carrinho de compras.
+- **smallBanners**: Componentes para exibição de banners menores.
+
+### Estado Global
+
+O estado global é gerenciado utilizando a Context API do React. A configuração do contexto e os provedores de estado estão localizados em `src/context`.
+
+### Roteamento
+
+O roteamento é gerenciado pelo React Router DOM. As principais rotas do projeto incluem:
+
+- `/home`: Página inicial.
+- `/shopping`: Página de compras.
+- `/about`: Página sobre a empresa.
+- `/contact`: Página de contato.
+- `/blog`: Página do blog.
+- `/cart`: Página do carrinho de compras.
+- `/login`: Página de login.
+- `/register`: Página de registro.
+
+A configuração do roteamento está localizada em `src/App.js`.
+
+### Contribuição
+
+Para contribuir com o projeto, siga as etapas abaixo:
+
+1. **Fork o Repositório:**
+   Clique no botão "Fork" no repositório GitHub.
+
+2. **Clone o Seu Fork:**
+   ```sh
+   git clone https://github.com/SEU_USUARIO/ecommerce-frontend.git
+   cd ecommerce-frontend
+   ```
+
+3. **Crie um Branch para Sua Feature:**
+   ```sh
+   git checkout -b minha-feature
+   ```
+
+4. **Commit suas Alterações:**
+   ```sh
+   git commit -m "Adiciona minha feature"
+   ```
+
+5. **Envie para o Repositório Remoto:**
+   ```sh
+   git push origin minha-feature
+   ```
+
+6. **Crie um Pull Request:**
+   Abra um Pull Request no repositório original.
+
+Se precisar de mais detalhes ou ajuda em alguma parte específica, sinta-se à vontade para perguntar!
