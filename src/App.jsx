@@ -14,16 +14,15 @@ function App() {
   return (
     <ShoppingCartProvider>
       <Routes>
-        <Route path="/ecommerce" Component={Home} />
-        <Route path="/ecommerce/blog" Component={BlogPage} />
-        <Route path="/ecommerce/login" Component={PageLogin} />
-        <Route path="/ecommerce/register" Component={PageRegister} />
-        <Route path="/ecommerce/shop" Component={Shopping} />
-        <Route path="/ecommerce/about" Component={AboutPage} />
-        <Route path="/ecommerce/product/:typeProduct/:id" Component={DetailsProduct} />
-        <Route path="/ecommerce/shop/product/:typeProduct/:id" Component={DetailsProduct} />
-
-        <Route path="/ecommerce/blog/:id" Component={BlogDetail} />
+        <Route path="/frontend-ecommerce" Component={Home} />
+        <Route path="/frontend-ecommerce/blog" Component={BlogPage} />
+        <Route path="/frontend-ecommerce/login" Component={PageLogin} />
+        <Route path="/frontend-ecommerce/register" Component={PageRegister} />
+        <Route path="/frontend-ecommerce/shop" Component={Shopping} />
+        <Route path="/frontend-ecommerce/about" Component={AboutPage} />
+        <Route path="/frontend-ecommerce/product/:typeProduct/:id" Component={DetailsProduct} />
+        <Route path="/frontend-ecommerce/shop/product/:typeProduct/:id" Component={DetailsProduct} />
+        <Route path="/frontend-ecommerce/blog/:id" Component={BlogDetail} />
 
       </Routes>
     </ShoppingCartProvider>
