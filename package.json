@@ -1,6 +1,6 @@
 {
-  "homepage": "https://dev-celo.github.io/ecommerce/",
-  "name": "ecommerce",
+  "homepage": "https://dev-celo.github.io/frontend-ecommerce/",
+  "name": "frontend-ecommerce",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
