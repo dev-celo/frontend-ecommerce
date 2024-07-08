@@ -18,7 +18,7 @@ beforeAll(() => {
 
 describe('Testing routes in App component', () => {
     test('renders home page when at /ecommerce', () => {
-        renderWithRouter(<App />, { wrapper: BrowserRouter, route: '/ecommerce/' });
+        renderWithRouter(<App />, { wrapper: BrowserRouter, route: '/frontend-ecommerce/' });
 
         const home = screen.getByTestId('home-page');
 
@@ -26,7 +26,7 @@ describe('Testing routes in App component', () => {
     });
 
     test('renders login page when at /ecommerce/login', () => {
-        renderWithRouter(<App />, { wrapper: BrowserRouter, route: '/ecommerce/login' });
+        renderWithRouter(<App />, { wrapper: BrowserRouter, route: '/frontend-ecommerce/login' });
 
         const login = screen.getByTestId('login-page');
 
@@ -34,7 +34,7 @@ describe('Testing routes in App component', () => {
     });
 
     test('renders register page when at /ecommerce/register', () => {
-        renderWithRouter(<App />, { wrapper: BrowserRouter, route: '/ecommerce/register' });
+        renderWithRouter(<App />, { wrapper: BrowserRouter, route: '/frontend-ecommerce/register' });
 
         const Register = screen.getByTestId('register-page');
 
@@ -42,7 +42,7 @@ describe('Testing routes in App component', () => {
     });
 
     test('renders details product page when at /ecommerce/product/:typeProduct/:id', () => {
-        renderWithRouter(<App />, { wrapper: BrowserRouter, route: '/ecommerce/product/shirts/1' });
+        renderWithRouter(<App />, { wrapper: BrowserRouter, route: '/frontend-ecommerce/product/shirts/1' });
 
         const detailsPage = screen.getByTestId('details-page');
 
