@@ -41,7 +41,7 @@ describe("Testes do componente Header", () => {
 
             // aferir
             await waitFor(() => {
-                expect(window.location.pathname).toBe('/ecommerce/');
+                expect(window.location.pathname).toBe('/frontend-ecommerce/');
             })
         });
 
@@ -62,7 +62,7 @@ describe("Testes do componente Header", () => {
             expect(imgLogoMobile).toBeInTheDocument();
         });
 
-        test("Espera-se que ao clicar em logo mobile seja redirecionado para /ecommerce/", async () => {
+        test("Espera-se que ao clicar em logo mobile seja redirecionado para /frontend-ecommerce/", async () => {
             // acessar os elementos da tela
             window.innerWidth = 800;
             render(
@@ -78,13 +78,13 @@ describe("Testes do componente Header", () => {
 
             // aferir
             await waitFor(() => {
-                expect(window.location.pathname).toBe("/ecommerce/");
+                expect(window.location.pathname).toBe("/frontend-ecommerce/");
             })
         });
     });
 
     describe("Testa barra de navegação", () => {
-        test("Espera-se que tenha um link Home na tela e ao clicar nele seja redirecionado para /ecommerce/", async () => {
+        test("Espera-se que tenha um link Home na tela e ao clicar nele seja redirecionado para /frontend-ecommerce/", async () => {
             // acessar os elementos da tela
             render(
                 <BrowserRouter>
@@ -100,7 +100,7 @@ describe("Testes do componente Header", () => {
 
             // aferir
             await waitFor(() => {
-                expect(window.location.pathname).toBe('/ecommerce/');
+                expect(window.location.pathname).toBe('/frontend-ecommerce/');
             });
         });
 
@@ -122,7 +122,7 @@ describe("Testes do componente Header", () => {
 
                 // aferir
                 await waitFor(() => {
-                    expect(window.location.pathname).toBe(`/ecommerce/${link}/`);
+                    expect(window.location.pathname).toBe(`/frontend-ecommerce/${link}/`);
                 });
             }
 
