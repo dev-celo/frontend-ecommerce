@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="section-p1">
       <div className="col1" id="contact-section" data-testid="contact-section">
-        <img className="logo-footer" src="/ecommerce/img/logo.png" alt="" />
+        <img className="logo-footer" src="/frontend-ecommerce/img/logo.png" alt="" />
         <h4>Contact</h4>
         <p><strong>Adress:</strong> 562 Wellington Road, Street 32, San Francisco</p>
         <p><strong>Phone:</strong> +01 2222 365/ (+91) 012345 6789</p>
@@ -46,7 +46,7 @@ function Footer() {
           <img src="./img/pay/app.jpg" alt="" />
         </div>
         <p>Secure Payment Getways</p>
-        <img className="payment" src="/ecommerce/img/pay/pay.png" alt="" />
+        <img className="payment" src="/frontend-ecommerce/img/pay/pay.png" alt="" />
       </div>
 
       <div className="copyright">

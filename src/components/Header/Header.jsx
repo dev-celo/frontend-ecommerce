@@ -15,7 +15,7 @@ function Header() {
         <FontAwesomeIcon onClick={openBar} data-testid="bar" id="bar" icon="bars" />
       </Button>  
         <Nav>
-          <Nav.Link to="/ecommerce/" as={NavLink}>
+          <Nav.Link to="/frontend-ecommerce/" as={NavLink}>
             <img id="logo" src={logo} className="logo" alt="Cura logo da página" />
           </Nav.Link>
         </Nav>
@@ -30,13 +30,13 @@ function Header() {
       <div>
         <ul id="navbar">
           <Nav>
-            <NavItem link="/ecommerce/" text="Home" />
-            <NavItem link="/ecommerce/shop/" text="Shop" />
-            <NavItem link="/ecommerce/blog/" text="Blog" />
-            <NavItem link="/ecommerce/about/" text="About" />
-            <NavItem link="/ecommerce/contact/" text="Contact" />
+            <NavItem link="/frontend-ecommerce/" text="Home" />
+            <NavItem link="/frontend-ecommerce/shop/" text="Shop" />
+            <NavItem link="/frontend-ecommerce/blog/" text="Blog" />
+            <NavItem link="/frontend-ecommerce/about/" text="About" />
+            <NavItem link="/frontend-ecommerce/contact/" text="Contact" />
             <NavItem handleClick={openCart} text="Cart" hasItems={cartQuantity > 0} />
-            <NavItem link="/ecommerce/login" text="Login" className="custom-button" />
+            <NavItem link="/frontend-ecommerce/login" text="Login" className="custom-button" />
           </Nav>
         </ul>
       </div>

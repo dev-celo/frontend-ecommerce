@@ -10,14 +10,13 @@ const BlogPage = () => {
                 {
                     postsData.map((post, index) => (
                         <div key={`${post.title}-${index}`} className="blog-box">
-                            {console.log(post.id)}
                             <div className="blog-img">
                                 <img src={post.image} alt={post.title} />
                             </div>
                             <div className="blog-details">
                                 <h4>{post.title}</h4>
                                 <p>{post.description}</p>
-                                <Link to={`/ecommerce/blog/${post.id}`}>CONTINUE READING</Link>
+                                <Link to={`/frontend-ecommerce/blog/${post.id}`}>CONTINUE READING</Link>
                             </div>
                             <h1>{post.date}</h1>
                         </div>

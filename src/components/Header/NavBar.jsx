@@ -20,12 +20,12 @@ function NavBar({ isOpen }) {
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                     <Nav className="flex-column">
-                        <Nav.Link to="/ecommerce/login/" as={NavLink} className="nav-link login active" onClick={handleLinkClick}>Login</Nav.Link>
-                        <Nav.Link to="/ecommerce/" as={NavLink} className="nav-link" onClick={handleLinkClick}>Home</Nav.Link>
-                        <Nav.Link to="/ecommerce/shop/" as={NavLink} className="nav-link" onClick={handleLinkClick}>Shop</Nav.Link>
-                        <Nav.Link to="/ecommerce/blog/" as={NavLink} className="nav-link" onClick={handleLinkClick}>Blog</Nav.Link>
-                        <Nav.Link to="/ecommerce/about/" as={NavLink} className="nav-link" onClick={handleLinkClick}>About</Nav.Link>
-                        <Nav.Link to="/ecommerce/contact/" as={NavLink} className="nav-link" onClick={handleLinkClick}>Contact</Nav.Link>
+                        <Nav.Link to="/frontend-ecommerce/login/" as={NavLink} className="nav-link login active" onClick={handleLinkClick}>Login</Nav.Link>
+                        <Nav.Link to="/frontend-ecommerce/" as={NavLink} className="nav-link" onClick={handleLinkClick}>Home</Nav.Link>
+                        <Nav.Link to="/frontend-ecommerce/shop/" as={NavLink} className="nav-link" onClick={handleLinkClick}>Shop</Nav.Link>
+                        <Nav.Link to="/frontend-ecommerce/blog/" as={NavLink} className="nav-link" onClick={handleLinkClick}>Blog</Nav.Link>
+                        <Nav.Link to="/frontend-ecommerce/about/" as={NavLink} className="nav-link" onClick={handleLinkClick}>About</Nav.Link>
+                        <Nav.Link to="/frontend-ecommerce/contact/" as={NavLink} className="nav-link" onClick={handleLinkClick}>Contact</Nav.Link>
                     </Nav>
                 </Offcanvas.Body>
             </Offcanvas>

@@ -17,7 +17,7 @@ export default defineConfig({
       provider: 'v8'
     }
   },
-  base: "/ecommerce/",
+  base: "/frontend-ecommerce/",
   server: {
     open: true,
   },

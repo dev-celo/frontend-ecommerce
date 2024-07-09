@@ -11,7 +11,7 @@ function About() {
             </section>
 
             <section id="about-head" className="section-p1">
-                <img src="/ecommerce/img/about/a6.jpg" alt="Imagem de promoção do about" />
+                <img src="/frontend-ecommerce/img/about/a6.jpg" alt="Imagem de promoção do about" />
 
                 <div>
                     <h2>Who We Are</h2>
@@ -27,7 +27,7 @@ function About() {
             <section id="about-app" className="section-p1">
                 <h1>Download Our <a href="#">App</a></h1>
                 <div className="video">
-                    <video muted loop src="/ecommerce/img/about/1.mp4"></video>
+                    <video muted loop src="/frontend-ecommerce/img/about/1.mp4"></video>
                 </div>
             </section>
         </>
