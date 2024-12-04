@@ -34,8 +34,8 @@
   color: var(--color-font-navbar-hover);
 }
 
-#navbar li a.active::after,
-#navbar li a:hover::after {
+#navbar li .nav-hover.active::after,
+#navbar li .nav-hover:hover::after {
   content: "";
   width: 30%;
   height: 0.2rem;

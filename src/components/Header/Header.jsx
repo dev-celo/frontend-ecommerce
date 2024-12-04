@@ -30,12 +30,12 @@ function Header() {
       <div>
         <ul id="navbar">
           <Nav>
-            <NavItem link="/frontend-ecommerce/" text="Home" />
-            <NavItem link="/frontend-ecommerce/shop/" text="Shop" />
-            <NavItem link="/frontend-ecommerce/blog/" text="Blog" />
-            <NavItem link="/frontend-ecommerce/about/" text="About" />
-            <NavItem link="/frontend-ecommerce/contact/" text="Contact" />
-            <NavItem handleClick={openCart} text="Cart" hasItems={cartQuantity > 0} />
+            <NavItem className="nav-hover" link="/frontend-ecommerce/" text="Home" />
+            <NavItem className="nav-hover" link="/frontend-ecommerce/shop/" text="Shop" />
+            <NavItem className="nav-hover" link="/frontend-ecommerce/blog/" text="Blog" />
+            <NavItem className="nav-hover" link="/frontend-ecommerce/about/" text="About" />
+            <NavItem className="nav-hover" link="/frontend-ecommerce/contact/" text="Contact" />
+            <NavItem className="nav-hover" handleClick={openCart} text="Cart" hasItems={cartQuantity > 0} />
             <NavItem link="/frontend-ecommerce/login" text="Login" className="custom-button" />
           </Nav>
         </ul>
