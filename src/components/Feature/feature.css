@@ -28,7 +28,8 @@
   padding: 0.9rem 0.8rem 0.6rem 0.8rem;
   line-height: 1;
   border-radius: 0.4rem;
-  color: var(--color-font-navbar-hover);
+  color: var(--background-navbar-color);
+  font-weight: 600;
   background-color: var(--background-alternative-rose);
 }
 
@@ -53,6 +54,11 @@
 }
 
 @media screen and (max-width: 768px) {
+  #feature .fe-box h6 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
   #feature .fe-box {
     width: 100%;
   }

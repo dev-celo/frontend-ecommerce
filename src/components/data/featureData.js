@@ -22,11 +22,6 @@ export const features = [
   {
     key: 5,
     imgSrc: "./img/features/f5.png",
-    altText: "Happy Cell",
-  },
-  {
-    key: 6,
-    imgSrc: "./img/features/f6.png",
-    altText: "F24/7 Support",
+    altText: "Suporte em até 24 horas",
   },
 ];
