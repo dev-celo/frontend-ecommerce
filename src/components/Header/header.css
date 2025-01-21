@@ -1,5 +1,5 @@
 #header {
-  background-color: rgb(212, 205, 205);
+  background: var(--background-navbar-color);
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.06);
   padding: 0 6rem;
   z-index: 999;
@@ -62,13 +62,13 @@
 }
 
 #logo {
-  width: 18rem;
+  width: 25rem;
   margin: 0 auto; /* Centraliza a logo */
 }
 
 .custom-button {
-  background-color: #4caf50; /* Cor de fundo */
-  color: #ffffff; /* Cor do texto */
+  background-color: #608f63; /* Cor de fundo */
+  color: black; /* Cor do texto */
   padding: 10px 20px; /* Espaçamento interno */
   border: none; /* Remove a borda */
   border-radius: 5px; /* Adiciona cantos arredondados */
@@ -78,7 +78,8 @@
 
 /* Estilo para o botão ao passar o mouse */
 .custom-button:hover {
-  background-color: #45a049; /* Cor de fundo alterada */
+  background-color: var(--color-cacau-hibrido-maduro); /* Cor de fundo alterada */
+  color:rgba(0, 0, 0, 0.06);
   transform: scale(1.05); /* Aumenta ligeiramente o tamanho do botão */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao botão */
 }

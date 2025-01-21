@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Nav, Navbar as NavbarBs, Button } from 'react-bootstrap';
 import { useShoppingCart } from '../context/shoppingCartContext';
-import logo from '/img/logo.png';
+import logo from '/img/logo_cacau_amado_o_cacau_da_bahia.png';
 import './header.css';
 
 function Header() {
@@ -30,11 +30,11 @@ function Header() {
       <div>
         <ul id="navbar">
           <Nav>
-            <NavItem className="nav-hover" link="/frontend-ecommerce/" text="Home" />
-            <NavItem className="nav-hover" link="/frontend-ecommerce/shop/" text="Shop" />
+            <NavItem className="nav-hover" link="/frontend-ecommerce/" text="início" />
+            <NavItem className="nav-hover" link="/frontend-ecommerce/shop/" text="Comprar" />
             <NavItem className="nav-hover" link="/frontend-ecommerce/blog/" text="Blog" />
-            <NavItem className="nav-hover" link="/frontend-ecommerce/about/" text="About" />
-            <NavItem className="nav-hover" link="/frontend-ecommerce/contact/" text="Contact" />
+            <NavItem className="nav-hover" link="/frontend-ecommerce/about/" text="Sobre" />
+            <NavItem className="nav-hover" link="/frontend-ecommerce/contact/" text="Contatos" />
             <NavItem className="nav-hover" handleClick={openCart} text="Cart" hasItems={cartQuantity > 0} />
             <NavItem link="/frontend-ecommerce/login" text="Login" className="custom-button" />
           </Nav>
