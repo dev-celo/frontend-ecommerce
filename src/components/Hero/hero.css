@@ -48,3 +48,26 @@
 .cont {
   background-color: var(--background-navbar-color);
 }
+
+@media screen and (max-width:768px) {
+  #hero {
+    background-position: center;
+    background-size: cover;
+    width: auto;
+    height: 85vh;
+    padding: 2rem 1rem;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  #hero h4,
+  #hero p {
+    text-align: center; /* Centraliza o texto */
+  }
+
+  #hero button {
+    padding: 2rem 4rem; /* Ajusta o tamanho do botão */
+    font-size: 2rem; /* Reduz levemente o tamanho da fonte */
+  }
+}
