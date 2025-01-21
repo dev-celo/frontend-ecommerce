@@ -2,26 +2,26 @@ export const features = [
   {
     key: 1,
     imgSrc: "./img/features/f1.png",
-    altText: "Free Shipping",
+    altText: "COMPRA FÁCIL",
   },
   {
     key: 2,
     imgSrc: "./img/features/f2.png",
-    altText: "Online Order",
+    altText: "ENTREGA RÁPIDA",
   },
   {
     key: 3,
     imgSrc: "./img/features/f3.png",
-    altText: "Save Money",
+    altText: "CASHBACK",
   },
   {
     key: 4,
     imgSrc: "./img/features/f4.png",
-    altText: "Promotions",
+    altText: "PROMOÇÕES",
   },
   {
     key: 5,
     imgSrc: "./img/features/f5.png",
-    altText: "Suporte em até 24 horas",
+    altText: "SUPORTE EM ATÉ 24 HORAS",
   },
 ];
