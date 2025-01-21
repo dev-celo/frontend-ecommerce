@@ -1,9 +1,3 @@
-:root {
-    --background-login: transparent;
-    --color-login: #000000;
-    --primary-color-login: #7c5588;
-}
-
 * {
     box-sizing: border-box;
 }
