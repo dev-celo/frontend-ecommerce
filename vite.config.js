@@ -19,7 +19,10 @@ export default defineConfig({
   },
   base: "/frontend-ecommerce/",
   server: {
-    open: true,
+    open: false,
+    port: 3000,  // Porta fixa
+    host: true,  // Permite acesso via rede ou contêiner
+    strictPort: true, // Evita mudança automática de porta
   },
   build: {
     rollupOptions: {
