@@ -2,10 +2,11 @@
 
 #hero {
     background-image: url(/img/hero4.png);
-    background-position: top 25% right 0;
+    background-color: var(--background-hero-color);
+    background-position: top 0 left 100%;
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 89.778vh;
+    background-size: contain;
+    height: 80vh;
   
     width: 100%;
     padding: 0 8rem;
@@ -17,11 +18,11 @@
   }
   
 #hero h4 {
-  padding-bottom: 1.5rem;
+  padding-bottom: .8rem;
 }
 
-#hero h1 {
-  color: var(--color-font-navbar-hover);
+#hero, #hero p {
+  color: var(--color-font-navbar);
 }
 
 #hero p {
@@ -36,7 +37,6 @@
 
   cursor: pointer;
 
-  color: var(--color-font-navbar-hover);
 
   border: 0;
   padding: 1.4rem 8rem 1.4rem 6.5rem;
